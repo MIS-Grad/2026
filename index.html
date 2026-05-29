@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>حفلة تخرج MIS 2026 | حجز التخرج</title>
-  
   <meta property="og:title" content="حفلة تخرج MIS 2026 - احجز مكانك الآن" />
   <meta property="og:description" content="حفلة تخرج دفعة MIS 2026، أماكن محدودة. سجل الآن واستمتع بليلة لا تُنسى." />
   <meta property="og:image" content="og-preview.jpg" />
@@ -36,6 +35,33 @@
       border-radius: 32px;
       box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
       overflow: hidden;
+      position: relative;
+    }
+
+    /* زر كتم الصوت العام */
+    .mute-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(12,45,75,0.8);
+      backdrop-filter: blur(4px);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: white;
+      font-size: 1.6rem;
+      z-index: 100;
+      transition: 0.2s;
+      border: 1px solid #fbbf24;
+    }
+    .mute-button:hover {
+      background: #fbbf24;
+      color: #0c2d4b;
+      transform: scale(1.05);
     }
 
     .hero {
@@ -44,6 +70,7 @@
       text-align: center;
       color: white;
       border-bottom: 5px solid #fbbf24;
+      position: relative;
     }
     .hero i.fa-graduation-cap {
       font-size: 3.2rem;
@@ -92,6 +119,37 @@
       padding-bottom: 0.8rem;
     }
     .section-internal-title i { color: #d4af37; }
+
+    /* زر تشغيل الموسيقى اليدوي الأنيق */
+    .manual-music-trigger {
+      background: linear-gradient(135deg, #fef9e6, #fff3d4);
+      border: 2px solid #fbbf24;
+      border-radius: 60px;
+      padding: 0.8rem 1.8rem;
+      margin-bottom: 1.8rem;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-weight: 800;
+      color: #b45309;
+      font-size: 1rem;
+      box-shadow: 0 6px 14px rgba(251,191,36,0.2);
+      width: auto;
+      backdrop-filter: blur(2px);
+    }
+    .manual-music-trigger i { font-size: 1.4rem; color: #f59e0b; }
+    .manual-music-trigger:hover {
+      background: #fbbf24;
+      color: #0c2d4b;
+      transform: scale(1.02);
+      border-color: #0c2d4b;
+    }
+    .manual-music-trigger:hover i { color: #0c2d4b; }
+    .inline-flex-center { display: flex; justify-content: flex-start; margin-bottom: 20px; }
 
     .items-flat-grid {
       display: grid;
@@ -232,7 +290,7 @@
     }
     .btn-whatsapp-submit:hover { background: #128C7E; transform: translateY(-2px); }
 
-    /* Gallery cards */
+    /* معرض الصور */
     .gallery-cards {
       display: flex;
       flex-wrap: wrap;
@@ -260,7 +318,6 @@
     @media (max-width: 700px) { .gallery-card { width: calc(33.33% - 1rem); } }
     @media (max-width: 480px) { .gallery-card { width: calc(50% - 0.8rem); } }
 
-    /* مودال المعرض الرئيسي (شبكة الصور) */
     .modal-gallery {
       display: none;
       position: fixed;
@@ -334,7 +391,7 @@
     .gallery-grid-item img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
     .gallery-grid-item:hover { transform: scale(1.02); border-color: #fbbf24; box-shadow: 0 8px 18px rgba(0,0,0,0.3); }
 
-    /* مودال تكبير الصورة مع أزرار التنقل */
+    /* مودال تكبير الصورة مع التنقل */
     .image-preview-modal {
       display: none;
       position: fixed;
@@ -434,6 +491,7 @@
       .nav-btn { width: 40px; height: 40px; font-size: 1.5rem; }
       .prev-btn { left: 10px; }
       .next-btn { right: 10px; }
+      .mute-button { top: 10px; left: 10px; width: 40px; height: 40px; font-size: 1.3rem; }
     }
 
     .toast-msg {
@@ -456,6 +514,11 @@
 
 <div class="container">
   <div class="main-card">
+    <!-- زر كتم الصوت العام -->
+    <div class="mute-button" id="globalMuteBtn">
+      <i class="fas fa-volume-up"></i>
+    </div>
+
     <div class="hero">
       <i class="fas fa-graduation-cap"></i>
       <h1>حفلة تخرج ( MIS ) 2026</h1>
@@ -467,6 +530,14 @@
     </div>
 
     <div class="content">
+      <!-- زر تشغيل الموسيقى اليدوي الأنيق (قبل خيارات الخريجين) -->
+      <div class="inline-flex-center">
+        <div class="manual-music-trigger" id="manualPlayBtn">
+          <i class="fas fa-music"></i> استمع إلى النشيد الترحيبي للحفلة 🎵
+          <i class="fas fa-headphones"></i>
+        </div>
+      </div>
+
       <div class="page-section">
         <h2 class="section-internal-title"><i class="fas fa-user-grad"></i> خيارات ورسوم حجز الخريجين</h2>
         <p style="font-weight: 700; color: #0c2d4b; margin-bottom: 0.5rem;"><i class="fas fa-box-open"></i> مشتملات تيكت الخريج الثابتة:</p>
@@ -548,7 +619,7 @@
   </div>
 </div>
 
-<!-- مودال تكبير الصورة مع أزرار التنقل -->
+<!-- مودال تكبير الصورة -->
 <div id="imagePreviewModal" class="image-preview-modal">
   <div class="preview-container">
     <button class="nav-btn prev-btn" id="prevImageBtn"><i class="fas fa-chevron-right"></i></button>
@@ -563,29 +634,102 @@
 <audio id="galleryMusic" src="gallery-music.mp3" preload="auto" loop="false"></audio>
 
 <script>
-  // ---- الثوابت والمتغيرات العامة ----
+  // ---- المتغيرات العامة ----
   const TOTAL_IMAGES = 31;
   const IMAGE_BASE = "images/";
   const EXT = ".jpg";
-  let currentPreviewIndex = 1;  // الصورة الحالية في المعاينة (من 1 إلى TOTAL_IMAGES)
+  let currentPreviewIndex = 1;
+  let isMuted = false;       // حالة الكتم العام
+  let welcomePlayed = false; // منع إعادة تشغيل الترحيبي تلقائيًا أكثر من مرة
+
+  // ---- مراجع الأصوات ----
+  const welcomeMusic = document.getElementById('welcomeMusic');
+  const galleryMusic = document.getElementById('galleryMusic');
+
+  // ---- دالة تطبيق الكتم العام ----
+  function applyMuteState() {
+    if (isMuted) {
+      welcomeMusic.pause();
+      galleryMusic.pause();
+      welcomeMusic.muted = true;
+      galleryMusic.muted = true;
+      document.getElementById('globalMuteBtn').innerHTML = '<i class="fas fa-volume-mute"></i>';
+    } else {
+      welcomeMusic.muted = false;
+      galleryMusic.muted = false;
+      document.getElementById('globalMuteBtn').innerHTML = '<i class="fas fa-volume-up"></i>';
+      // لا نعيد تشغيل أي شيء تلقائياً، فقط نرفع الكتم.
+    }
+  }
+
+  // تبديل حالة الكتم
+  function toggleMute() {
+    isMuted = !isMuted;
+    applyMuteState();
+  }
+  document.getElementById('globalMuteBtn').addEventListener('click', toggleMute);
+
+  // ---- تشغيل الموسيقى الترحيبية (مرة واحدة، مع احترام الكتم) ----
+  function playWelcomeMusicOnce() {
+    if (isMuted) return;
+    if (welcomePlayed) return;
+    welcomeMusic.volume = 0.4;
+    welcomeMusic.play().then(() => {
+      welcomePlayed = true;
+      welcomeMusic.onended = () => { /* توقف تام */ };
+    }).catch(err => {
+      console.log("Welcome autoplay blocked, will play on interaction or manual.");
+    });
+  }
+
+  // ---- تشغيل يدوي (عن طريق الزر الجميل) ----
+  function manualPlayWelcome() {
+    if (isMuted) {
+      // إذا كان مكتوماً نعطي إشعار بسيط
+      const toast = document.getElementById('toast');
+      toast.textContent = "🔇 الصوت مكتوم، ألغِ الكتم أولاً";
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2000);
+      return;
+    }
+    // نوقف الموسيقى الحالية ونعيد تشغيلها من البداية
+    welcomeMusic.pause();
+    welcomeMusic.currentTime = 0;
+    welcomeMusic.play().then(() => {
+      welcomePlayed = true; // تعتبر مشغولة الآن
+    }).catch(e => console.log);
+  }
+
+  // ---- تشغيل موسيقى المعرض (مع احترام الكتم) ----
+  function playGalleryMusic() {
+    if (isMuted) return;
+    galleryMusic.currentTime = 0;
+    galleryMusic.play().catch(e => console.log("Gallery music blocked"));
+  }
+
+  function stopGalleryMusic() {
+    galleryMusic.pause();
+    galleryMusic.currentTime = 0;
+  }
 
   // ---- نسخ الرقم ----
   function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
       const toast = document.getElementById('toast');
+      toast.textContent = "✅ تم نسخ الرقم بنجاح";
       toast.classList.add('show');
       setTimeout(() => toast.classList.remove('show'), 2000);
     }).catch(() => alert("يرجى نسخ الرقم يدويًا: " + text));
   }
 
-  // ---- اختيار طريقة الدفع (الراديو) ----
+  // ---- الراديو ----
   function selectRadio(element) {
     document.querySelectorAll('.radio-tile').forEach(tile => tile.classList.remove('active'));
     element.classList.add('active');
     element.querySelector('input').checked = true;
   }
 
-  // ---- إرسال واتساب ----
+  // ---- واتساب ----
   function sendToWhatsapp(event) {
     event.preventDefault();
     const name = document.getElementById('studentName').value;
@@ -596,7 +740,7 @@
     window.open(`https://wa.me/201025004123?text=${message}`, '_blank');
   }
 
-  // ---- بناء معرض الصور المصغرة (أول 5 صور) ----
+  // ---- بناء المعرض ----
   const cardsContainer = document.getElementById("galleryCardsContainer");
   for (let i = 1; i <= 5; i++) {
     const card = document.createElement("div");
@@ -610,12 +754,10 @@
     cardsContainer.appendChild(card);
   }
 
-  // ---- عناصر مودال المعرض الرئيسي ----
   const modal = document.getElementById("fullGalleryModal");
   const galleryGrid = document.getElementById("galleryGridContainer");
   const closeModalBtn = document.getElementById("closeModalBtn");
 
-  // ملء شبكة الـ 31 صورة داخل المودال
   function fillGalleryGrid() {
     galleryGrid.innerHTML = "";
     for (let i = 1; i <= TOTAL_IMAGES; i++) {
@@ -627,7 +769,6 @@
       imgEl.alt = `صورة ${i}`;
       imgEl.onerror = function() { this.src = `https://placehold.co/300x300/1e293b/fbbf24?text=${i}`; };
       item.appendChild(imgEl);
-      // عند النقر على الصورة المصغرة، نفتح معاينة كبيرة مع تحديد رقم الصورة الحالية
       item.addEventListener("click", (e) => {
         e.stopPropagation();
         currentPreviewIndex = i;
@@ -641,26 +782,22 @@
     if (galleryGrid.children.length === 0) fillGalleryGrid();
     modal.style.display = "flex";
     document.body.style.overflow = "hidden";
-    // تشغيل موسيقى المعرض (وإيقاف الترحيبية لو لسه شغالة)
-    const welcomeAudio = document.getElementById('welcomeMusic');
-    const galleryAudio = document.getElementById('galleryMusic');
-    if (!welcomeAudio.paused) welcomeAudio.pause();
-    galleryAudio.currentTime = 0;
-    galleryAudio.play().catch(e => console.log("Gallery music play blocked:", e));
+    // إيقاف الترحيبي مؤقتًا وتشغيل موسيقى المعرض
+    welcomeMusic.pause();
+    playGalleryMusic();
   }
 
   function closeGalleryModal() {
     modal.style.display = "none";
     document.body.style.overflow = "";
-    const galleryAudio = document.getElementById('galleryMusic');
-    galleryAudio.pause();
-    galleryAudio.currentTime = 0;
+    stopGalleryMusic();
+    // لا نعيد تشغيل الترحيبي تلقائياً بعد إغلاق المعرض
   }
   closeModalBtn.addEventListener("click", closeGalleryModal);
   modal.addEventListener("click", (e) => { if (e.target === modal) closeGalleryModal(); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && modal.style.display === "flex") closeGalleryModal(); });
 
-  // ---- مودال معاينة الصورة مع التنقل ----
+  // ---- معاينة الصورة بالتنقل ----
   const previewModal = document.getElementById("imagePreviewModal");
   const previewImage = document.getElementById("previewImage");
   const prevBtn = document.getElementById("prevImageBtn");
@@ -674,48 +811,27 @@
     previewImage.onerror = function() { this.src = `https://placehold.co/800x800/1e293b/fbbf24?text=${currentPreviewIndex}`; };
     counterSpan.textContent = `صورة ${currentPreviewIndex} من ${TOTAL_IMAGES}`;
   }
-
   function openImagePreview() {
     updatePreviewImage();
     previewModal.style.display = "flex";
     document.body.style.overflow = "hidden";
   }
-
   function closeImagePreview() {
     previewModal.style.display = "none";
     document.body.style.overflow = "";
   }
-
   function nextImage() {
-    if (currentPreviewIndex < TOTAL_IMAGES) {
-      currentPreviewIndex++;
-      updatePreviewImage();
-    } else {
-      // اختياري: لو في آخر صورة نلف للأول
-      currentPreviewIndex = 1;
-      updatePreviewImage();
-    }
+    currentPreviewIndex = (currentPreviewIndex % TOTAL_IMAGES) + 1;
+    updatePreviewImage();
   }
-
   function prevImage() {
-    if (currentPreviewIndex > 1) {
-      currentPreviewIndex--;
-      updatePreviewImage();
-    } else {
-      currentPreviewIndex = TOTAL_IMAGES;
-      updatePreviewImage();
-    }
+    currentPreviewIndex = (currentPreviewIndex - 2 + TOTAL_IMAGES) % TOTAL_IMAGES + 1;
+    updatePreviewImage();
   }
-
-  // أحداث الأزرار
   prevBtn.addEventListener("click", (e) => { e.stopPropagation(); prevImage(); });
   nextBtn.addEventListener("click", (e) => { e.stopPropagation(); nextImage(); });
   closePreviewBtn.addEventListener("click", closeImagePreview);
-  previewModal.addEventListener("click", (e) => {
-    if (e.target === previewModal) closeImagePreview();
-  });
-
-  // دعم أزرار لوحة المفاتيح
+  previewModal.addEventListener("click", (e) => { if (e.target === previewModal) closeImagePreview(); });
   document.addEventListener("keydown", (e) => {
     if (previewModal.style.display === "flex") {
       if (e.key === "ArrowRight") { prevImage(); e.preventDefault(); }
@@ -724,37 +840,26 @@
     }
   });
 
-  // ---- تشغيل الموسيقى الترحيبية (مرة واحدة عند أول تفاعل، بدون رسائل) ----
-  const welcomeMusic = document.getElementById('welcomeMusic');
-  let welcomePlayed = false;
-
-  function playWelcomeMusic() {
-    if (welcomePlayed) return;
-    welcomeMusic.volume = 0.4;
-    welcomeMusic.play().then(() => {
-      welcomePlayed = true;
-      welcomeMusic.onended = () => { /* توقف تام */ };
-    }).catch(err => {
-      // إذا منع المتصفح التشغيل التلقائي، ننتظر أول تفاعل (نقرة أو تمرير)
-      const firstInteraction = () => {
-        if (!welcomePlayed) {
-          welcomeMusic.play().catch(e=>console.log);
-          welcomePlayed = true;
-        }
-        document.removeEventListener('click', firstInteraction);
-        document.removeEventListener('touchstart', firstInteraction);
-        document.removeEventListener('scroll', firstInteraction);
-      };
-      document.addEventListener('click', firstInteraction);
-      document.addEventListener('touchstart', firstInteraction);
-      document.addEventListener('scroll', firstInteraction);
-    });
-  }
-
-  // محاولة التشغيل التلقائي عند تحميل الصفحة (قد تمنع المتصفحات لكن لا مانع)
+  // ---- محاولة التشغيل التلقائي للترحيبي عند التحميل (قد تمنع المتصفحات) ----
   window.addEventListener('load', () => {
-    playWelcomeMusic();
+    playWelcomeMusicOnce();
+    // في حالة المنع، نربط أول تفاعل لتشغيلها (بدون رسائل، لكن المستخدم سيلاحظ)
+    const firstInteraction = () => {
+      if (!welcomePlayed && !isMuted) {
+        welcomeMusic.play().catch(e=>console.log);
+        welcomePlayed = true;
+      }
+      document.removeEventListener('click', firstInteraction);
+      document.removeEventListener('touchstart', firstInteraction);
+      document.removeEventListener('scroll', firstInteraction);
+    };
+    document.addEventListener('click', firstInteraction);
+    document.addEventListener('touchstart', firstInteraction);
+    document.addEventListener('scroll', firstInteraction);
   });
+
+  // ربط الزر اليدوي
+  document.getElementById('manualPlayBtn').addEventListener('click', manualPlayWelcome);
 </script>
 </body>
 </html>
