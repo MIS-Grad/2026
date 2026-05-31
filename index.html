@@ -10,7 +10,6 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://example.com" />
-  <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +27,7 @@
       padding: 2rem 1rem;
     }
 
-    .container { max-width: 850px; margin: 0 auto; }
+    .container { max-width: 900px; margin: 0 auto; }
 
     .main-card {
       background: #ffffff;
@@ -36,32 +35,6 @@
       box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
       overflow: hidden;
       position: relative;
-    }
-
-    /* زر كتم الصوت العام */
-    .mute-button {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background: rgba(12,45,75,0.8);
-      backdrop-filter: blur(4px);
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      color: white;
-      font-size: 1.6rem;
-      z-index: 100;
-      transition: 0.2s;
-      border: 1px solid #fbbf24;
-    }
-    .mute-button:hover {
-      background: #fbbf24;
-      color: #0c2d4b;
-      transform: scale(1.05);
     }
 
     .hero {
@@ -98,6 +71,45 @@
 
     .content { padding: 1.5rem; }
 
+    /* music controls area */
+    .music-control-area {
+      text-align: center;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .manual-music-trigger, .mute-welcome-btn {
+      background: linear-gradient(135deg, #fef9e6, #fff3d4);
+      border: 2px solid #fbbf24;
+      border-radius: 60px;
+      padding: 0.9rem 2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      font-weight: 800;
+      color: #b45309;
+      font-size: 1.1rem;
+      box-shadow: 0 8px 20px rgba(251,191,36,0.3);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .mute-welcome-btn {
+      background: #f1f5f9;
+      border-color: #94a3b8;
+      color: #1e293b;
+    }
+    .manual-music-trigger i, .mute-welcome-btn i { font-size: 1.4rem; color: #f59e0b; }
+    .manual-music-trigger:hover, .mute-welcome-btn:hover {
+      background: #fbbf24;
+      color: #0c2d4b;
+      transform: scale(1.02);
+      border-color: #0c2d4b;
+    }
+    .manual-music-trigger:hover i, .mute-welcome-btn:hover i { color: #0c2d4b; }
+
     .page-section {
       background: #ffffff;
       border: 2px solid #e2e8f0;
@@ -119,37 +131,6 @@
       padding-bottom: 0.8rem;
     }
     .section-internal-title i { color: #d4af37; }
-
-    /* زر تشغيل الموسيقى اليدوي الأنيق */
-    .manual-music-trigger {
-      background: linear-gradient(135deg, #fef9e6, #fff3d4);
-      border: 2px solid #fbbf24;
-      border-radius: 60px;
-      padding: 0.8rem 1.8rem;
-      margin-bottom: 1.8rem;
-      text-align: center;
-      cursor: pointer;
-      transition: 0.3s;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      font-weight: 800;
-      color: #b45309;
-      font-size: 1rem;
-      box-shadow: 0 6px 14px rgba(251,191,36,0.2);
-      width: auto;
-      backdrop-filter: blur(2px);
-    }
-    .manual-music-trigger i { font-size: 1.4rem; color: #f59e0b; }
-    .manual-music-trigger:hover {
-      background: #fbbf24;
-      color: #0c2d4b;
-      transform: scale(1.02);
-      border-color: #0c2d4b;
-    }
-    .manual-music-trigger:hover i { color: #0c2d4b; }
-    .inline-flex-center { display: flex; justify-content: flex-start; margin-bottom: 20px; }
 
     .items-flat-grid {
       display: grid;
@@ -203,42 +184,8 @@
     .alert-amber { background: #fffbeb; border-color: #f59e0b; color: #78350f; }
     .alert-blue { background: #f0f9ff; border-color: #3b82f6; color: #1e40af; }
 
-    .unified-payment-card {
-      background: #f8fafc;
-      border: 2px dashed #0c2d4b;
-      border-radius: 20px;
-      padding: 1.5rem;
-      text-align: center;
-      margin: 1rem 0;
-    }
-    .unified-number {
-      font-family: monospace;
-      font-size: 1.8rem;
-      font-weight: 900;
-      color: #0c2d4b;
-      background: #ffffff;
-      padding: 0.5rem 1.5rem;
-      border-radius: 12px;
-      display: inline-block;
-      margin: 10px 0;
-      border: 1px solid #cbd5e1;
-      letter-spacing: 2px;
-    }
-    .btn-copy-unified {
-      background: #0c2d4b;
-      color: white;
-      border: none;
-      padding: 10px 24px;
-      border-radius: 12px;
-      font-family: 'Cairo', sans-serif;
-      font-weight: 700;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-    .btn-copy-unified:hover { background: #fbbf24; color: #0c2d4b; }
-
-    .form-group { margin-bottom: 1.2rem; }
-    .form-group label { display: block; font-weight: 700; color: #0c2d4b; margin-bottom: 6px; }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label { display: block; font-weight: 800; color: #0c2d4b; margin-bottom: 8px; }
     .form-control {
       width: 100%;
       font-family: 'Cairo', sans-serif;
@@ -270,6 +217,9 @@
     .radio-tile input { position: absolute; opacity: 0; }
     .radio-tile.active { border-color: #10b981; background: #ecfdf5; color: #065f46; }
 
+    .inline-radio-group { display: flex; gap: 20px; align-items: center; margin-top: 6px; }
+    .inline-radio-group label { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; cursor: pointer; margin-bottom: 0; }
+
     .btn-whatsapp-submit {
       display: inline-flex;
       align-items: center;
@@ -280,44 +230,122 @@
       border: none;
       font-family: 'Cairo', sans-serif;
       font-weight: 800;
-      font-size: 1.25rem;
-      padding: 1.2rem;
-      border-radius: 50px;
-      width: 100%;
+      font-size: 1.2rem;
+      padding: 1rem;
+      border-radius: 60px;
       cursor: pointer;
       transition: 0.2s;
-      box-shadow: 0 8px 24px rgba(37,211,102,0.25);
+      flex: 1;
+      min-width: 200px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      width: 100%;
     }
-    .btn-whatsapp-submit:hover { background: #128C7E; transform: translateY(-2px); }
+    .btn-whatsapp-submit:disabled {
+      background: #a8c9b0;
+      cursor: not-allowed;
+      opacity: 0.7;
+      transform: none;
+    }
+    .btn-whatsapp-submit:enabled:hover {
+      background: #128C7E;
+      transform: translateY(-2px);
+    }
 
-    /* معرض الصور */
+    /* زر واتساب عائم في الزاوية اليسرى السفلية */
+    .float-whatsapp {
+      position: fixed;
+      bottom: 25px;
+      left: 25px;
+      background: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      z-index: 1000;
+      border: none;
+      text-decoration: none;
+    }
+    .float-whatsapp:hover {
+      background: #128C7E;
+      transform: scale(1.08);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+    }
+
+    /* تحسين معرض الصور (مظهر جمالي) */
+    .gallery-section {
+      background: linear-gradient(145deg, #fef9e6 0%, #ffffff 100%);
+      border: 2px solid #fbbf24;
+    }
     .gallery-cards {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1.2rem;
-      margin: 1rem 0;
+      margin: 1.5rem 0;
     }
     .gallery-card {
-      width: calc(20% - 1rem);
-      min-width: 110px;
+      width: calc(20% - 1.2rem);
+      min-width: 120px;
       cursor: pointer;
-      border-radius: 20px;
+      border-radius: 28px;
       overflow: hidden;
-      transition: all 0.2s ease;
-      background: #f8fafc;
-      border: 2px solid #e2e8f0;
+      transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      background: #fff;
+      border: 3px solid #e2e8f0;
       aspect-ratio: 1 / 1;
       display: flex;
       align-items: center;
       justify-content: center;
+      box-shadow: 0 15px 25px -12px rgba(0,0,0,0.2);
+      position: relative;
     }
-    .gallery-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.2s; }
-    .gallery-card:hover { transform: scale(1.02); border-color: #fbbf24; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-    .gallery-hint { text-align: center; font-size: 0.85rem; color: #475569; margin-top: 12px; font-weight: 600; }
-    @media (max-width: 700px) { .gallery-card { width: calc(33.33% - 1rem); } }
+    .gallery-card::after {
+      content: "🔍";
+      position: absolute;
+      bottom: 8px;
+      left: 12px;
+      font-size: 1.2rem;
+      background: rgba(0,0,0,0.5);
+      color: #fbbf24;
+      padding: 4px 8px;
+      border-radius: 30px;
+      opacity: 0;
+      transition: 0.2s;
+      pointer-events: none;
+    }
+    .gallery-card:hover::after {
+      opacity: 1;
+    }
+    .gallery-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .gallery-card:hover { transform: scale(1.02); border-color: #fbbf24; box-shadow: 0 20px 35px -12px rgba(0,0,0,0.3); }
+    .gallery-card:hover img { transform: scale(1.05); }
+    .gallery-hint {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #475569;
+      margin-top: 15px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #f1f5f9;
+      width: fit-content;
+      margin-inline: auto;
+      padding: 0.5rem 1.8rem;
+      border-radius: 60px;
+    }
+    @media (max-width: 700px) { .gallery-card { width: calc(33.33% - 1rem); min-width: 100px; } }
     @media (max-width: 480px) { .gallery-card { width: calc(50% - 0.8rem); } }
 
+    /* مودال المعرض الرئيسي (نفس الصفحة) */
     .modal-gallery {
       display: none;
       position: fixed;
@@ -325,23 +353,23 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.92);
+      background-color: rgba(0, 0, 0, 0.94);
       z-index: 9999;
       justify-content: center;
       align-items: center;
-      backdrop-filter: blur(3px);
+      backdrop-filter: blur(8px);
     }
     .modal-content-gallery {
       background: #0f172a;
-      width: 90%;
-      max-width: 1200px;
-      height: 85%;
-      border-radius: 32px;
-      padding: 1.2rem;
+      width: 92%;
+      max-width: 1300px;
+      height: 88%;
+      border-radius: 48px;
+      padding: 1.5rem;
       position: relative;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.6);
       border: 1px solid #fbbf2466;
     }
     .modal-header-gallery {
@@ -350,48 +378,55 @@
       align-items: center;
       padding-bottom: 12px;
       border-bottom: 2px solid #334155;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       flex-wrap: wrap;
+      gap: 12px;
     }
-    .modal-header-gallery h3 { color: #fbbf24; font-size: 1.4rem; font-weight: 800; margin: 0; }
+    .modal-header-gallery h3 { color: #fbbf24; font-size: 1.5rem; font-weight: 800; margin: 0; }
     .modal-header-gallery h3 i { margin-left: 8px; }
-    .close-modal-btn {
+    .gallery-actions { display: flex; gap: 12px; }
+    .close-modal-btn, .mute-gallery-btn {
       background: #dc2626;
       border: none;
       color: white;
-      width: 40px;
-      height: 40px;
-      border-radius: 40px;
-      font-size: 1.5rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 44px;
+      font-size: 1.6rem;
       cursor: pointer;
       transition: 0.2s;
-      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+    .mute-gallery-btn { background: #f59e0b; color: #0c2d4b; }
     .close-modal-btn:hover { background: #b91c1c; transform: scale(1.05); }
+    .mute-gallery-btn:hover { background: #fbbf24; transform: scale(1.05); }
     .gallery-grid {
       overflow-y: auto;
       flex: 1;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 18px;
-      padding: 10px 4px;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 20px;
+      padding: 8px 4px;
       direction: ltr;
     }
     .gallery-grid-item {
       background: #1e293b;
-      border-radius: 20px;
+      border-radius: 24px;
       overflow: hidden;
       aspect-ratio: 1 / 1;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      transition: 0.2s;
+      transition: all 0.2s;
+      border: 2px solid transparent;
     }
-    .gallery-grid-item img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
-    .gallery-grid-item:hover { transform: scale(1.02); border-color: #fbbf24; box-shadow: 0 8px 18px rgba(0,0,0,0.3); }
+    .gallery-grid-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.2s; }
+    .gallery-grid-item:hover { transform: scale(1.02); border-color: #fbbf24; box-shadow: 0 12px 25px rgba(0,0,0,0.4); }
 
-    /* مودال تكبير الصورة مع التنقل */
+    /* مودال تكبير الصورة */
     .image-preview-modal {
       display: none;
       position: fixed;
@@ -399,7 +434,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.95);
+      background: rgba(0,0,0,0.96);
       z-index: 10000;
       justify-content: center;
       align-items: center;
@@ -417,9 +452,10 @@
       max-width: 85%;
       max-height: 85%;
       object-fit: contain;
-      border-radius: 20px;
-      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+      border-radius: 24px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.6);
       pointer-events: none;
+      transition: transform 0.1s ease;
     }
     .nav-btn {
       position: absolute;
@@ -428,8 +464,8 @@
       background: rgba(0,0,0,0.6);
       color: white;
       border: none;
-      width: 50px;
-      height: 50px;
+      width: 54px;
+      height: 54px;
       border-radius: 50%;
       font-size: 2rem;
       cursor: pointer;
@@ -439,19 +475,19 @@
       transition: 0.2s;
       z-index: 10001;
     }
-    .nav-btn:hover { background: #fbbf24; color: #0c2d4b; }
-    .prev-btn { left: 20px; }
-    .next-btn { right: 20px; }
+    .nav-btn:hover { background: #fbbf24; color: #0c2d4b; transform: translateY(-50%) scale(1.05); }
+    .prev-btn { left: 25px; }
+    .next-btn { right: 25px; }
     .close-preview {
       position: absolute;
-      top: 20px;
-      left: 30px;
-      font-size: 40px;
+      top: 25px;
+      left: 35px;
+      font-size: 44px;
       color: white;
       cursor: pointer;
       background: rgba(0,0,0,0.6);
-      width: 50px;
-      height: 50px;
+      width: 54px;
+      height: 54px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -459,53 +495,101 @@
       transition: 0.2s;
       z-index: 10001;
     }
-    .close-preview:hover { background: #dc2626; }
+    .close-preview:hover { background: #dc2626; transform: scale(1.05); }
     .counter {
       position: absolute;
-      bottom: 20px;
+      bottom: 25px;
       left: 50%;
       transform: translateX(-50%);
       background: rgba(0,0,0,0.7);
       color: #fbbf24;
-      padding: 6px 16px;
-      border-radius: 40px;
-      font-weight: 700;
-      font-size: 0.9rem;
+      padding: 8px 20px;
+      border-radius: 60px;
+      font-weight: 800;
+      font-size: 1rem;
       z-index: 10001;
     }
 
+    /* منطقة الدمج والتحويل */
+    .payment-number-card {
+      background: linear-gradient(135deg, #f8fafc, #ffffff);
+      border-radius: 28px;
+      padding: 1.5rem;
+      margin: 2rem 0 1rem;
+      text-align: center;
+      border: 2px solid #e2e8f0;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+    }
+    .payment-number-card h3 {
+      font-weight: 800;
+      color: #0c2d4b;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+    .payment-number-card p {
+      color: #475569;
+      margin-bottom: 1rem;
+    }
+    .unified-number {
+      font-family: monospace;
+      font-size: 1.9rem;
+      font-weight: 900;
+      background: #0c2d4b;
+      color: #fbbf24;
+      padding: 0.4rem 1.8rem;
+      border-radius: 60px;
+      display: inline-block;
+      letter-spacing: 3px;
+      margin: 0.5rem 0;
+    }
+    .copy-btn-small {
+      background: #fbbf24;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-family: 'Cairo', sans-serif;
+      font-weight: 800;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.2s;
+      color: #0c2d4b;
+      margin-right: 10px;
+    }
+    .copy-btn-small:hover { background: #0c2d4b; color: #fbbf24; transform: scale(1.02); }
+
     .footer-text {
       text-align: center;
-      margin-top: 3rem;
+      margin-top: 2rem;
       font-size: 0.85rem;
       color: #64748b;
       border-top: 1px solid #e2e8f0;
       padding-top: 1.5rem;
     }
-
     @media (max-width: 768px) {
-      body { padding: 1rem 0.5rem; }
+      body { padding: 2rem 0.8rem; }
       .hero h1 { font-size: 1.8rem; }
       .page-section { padding: 1.5rem 1rem; }
       .payment-options-flex { flex-direction: column; }
       .nav-btn { width: 40px; height: 40px; font-size: 1.5rem; }
       .prev-btn { left: 10px; }
       .next-btn { right: 10px; }
-      .mute-button { top: 10px; left: 10px; width: 40px; height: 40px; font-size: 1.3rem; }
+      .close-preview { width: 45px; height: 45px; font-size: 36px; left: 15px; top: 15px; }
+      .float-whatsapp { width: 50px; height: 50px; font-size: 1.8rem; bottom: 15px; left: 15px; }
     }
-
     .toast-msg {
       position: fixed;
-      bottom: 20px;
+      bottom: 25px;
       left: 50%;
-      transform: translateX(-50%) translateY(80px);
+      transform: translateX(-50%) translateY(100px);
       background: #059669;
       color: white;
       padding: 0.7rem 2rem;
-      border-radius: 50px;
+      border-radius: 60px;
       font-weight: 700;
       transition: 0.2s;
-      z-index: 1000;
+      z-index: 2000;
+      font-size: 0.9rem;
+      white-space: nowrap;
     }
     .toast-msg.show { transform: translateX(-50%) translateY(0); }
   </style>
@@ -514,11 +598,6 @@
 
 <div class="container">
   <div class="main-card">
-    <!-- زر كتم الصوت العام -->
-    <div class="mute-button" id="globalMuteBtn">
-      <i class="fas fa-volume-up"></i>
-    </div>
-
     <div class="hero">
       <i class="fas fa-graduation-cap"></i>
       <h1>حفلة تخرج ( MIS ) 2026</h1>
@@ -530,11 +609,13 @@
     </div>
 
     <div class="content">
-      <!-- زر تشغيل الموسيقى اليدوي الأنيق (قبل خيارات الخريجين) -->
-      <div class="inline-flex-center">
+      <div class="music-control-area">
         <div class="manual-music-trigger" id="manualPlayBtn">
-          <i class="fas fa-music"></i> استمع إلى النشيد الترحيبي للحفلة 🎵
+          <i class="fas fa-music"></i> استمع  
           <i class="fas fa-headphones"></i>
+        </div>
+        <div class="mute-welcome-btn" id="muteWelcomeBtn">
+          <i class="fas fa-volume-up" id="welcomeMuteIcon"></i> 
         </div>
       </div>
 
@@ -554,7 +635,7 @@
           <div class="pay-opt-rect"><h4>الخيار الثاني <span>600 جنيه</span></h4><p style="font-size: 0.9rem; font-weight: 600; color: #475569;">متاح كمقدم جدية حجز، ويتبقى 600 جنيه يتم سدادها مرناً خلال شهر.</p></div>
         </div>
         <div class="custom-alert alert-amber"><i class="fas fa-clock"></i> <strong>ترتيب صعود المنصة:</strong> ترتيب التكريم واستلام الكود الخاص بك في الحفلة يكون تماماً حسب أسبقية الحجز.</div>
-        <div class="custom-alert alert-red"><i class="fas fa-exclamation-circle"></i> <strong>تنبيه هام جداً (عدم الاسترداد):</strong> في حالة عدم استكمال المبلغ لا يحق للخريج استرداد المقدم؛ لأنه بمجرد تسجيل البيانات يتم البدء فوراً في تجهيز المستلزمات الخاصة بك.</div>
+        <div class="custom-alert alert-red"><i class="fas fa-exclamation-circle"></i> <strong>تنبيه هام جداً :</strong> في حالة عدم استكمال المبلغ لا يحق للخريج استرداد المقدم؛ لأنه بمجرد تسجيل البيانات يتم البدء فوراً في تجهيز المستلزمات الخاصة بك.</div>
       </div>
 
       <div class="page-section">
@@ -564,38 +645,91 @@
           <ul style="list-style: none; padding-right: 0;">
             <li style="margin-bottom: 8px; font-weight: 600;"><i class="fas fa-check-circle" style="color: #10b981; margin-left: 8px;"></i> عدد المرافقين الإضافيين مفتوح لأي عدد تحتاجه.</li>
             <li style="margin-bottom: 8px; font-weight: 600;"><i class="fas fa-check-circle" style="color: #10b981; margin-left: 8px;"></i> <strong>شرط أساسي ومهم:</strong> لا يمكن حجز أي مرافقين إضافيين إلا بعد استكمال الحجز الأساسي الخاص بالخريج أولاً.</li>
-            <li style="font-weight: 600;"><i class="fas fa-check-circle" style="color: #ea580c; margin-left: 8px;"></i> <strong>الأطفال :</strong> من سن 3 سنوات فيما فوق يتم احتساب تيكت مرافق كامل لهم (300 جنيه).</li>
+            <li style="font-weight: 600;"><i class="fas fa-check-circle" style="color: #ea580c; margin-left: 8px;"></i> <strong>الأطفال :</strong> من بعد سن 3 سنوات يتم احتساب تيكت مرافق كامل لهم (300 جنيه).</li>
           </ul>
         </div>
         <div class="custom-alert alert-amber"><i class="fas fa-exclamation-triangle"></i> <strong>ميعاد حجز المرافقين:</strong> يجب حجز المرافقين قبل الحفلة بوقت كافٍ، وفي حال اكتمال العدد الإجمالي للحفلة وسعة القاعة لن يُسمح بحجز أي مرافقين إضافيين.</div>
       </div>
 
-      <div class="page-section">
-        <h2 class="section-internal-title"><i class="fas fa-credit-card"></i> طرق الدفع وأرقام الحجز المعتمدة</h2>
-        <p style="font-weight: 700; text-align: center; color: #475569;"><i class="fas fa-mobile-alt"></i> الرقم المعتمد لجميع التحويلات الفورية:</p>
-        <div class="unified-payment-card">
-          <div style="font-weight: 800; font-size: 1.2rem; color: #0c2d4b;">إنستا باي &nbsp;|&nbsp; فودافون كاش</div>
-          <span class="unified-number" id="target-phone">01025004123</span>
-          <div><button class="btn-copy-unified" onclick="copyToClipboard('01025004123')"><i class="fas fa-copy"></i> نسخ الرقم</button></div>
-        </div>
-        <div class="custom-alert alert-blue"><i class="fas fa-percentage"></i> <strong>ملحوظة الرسوم:</strong> توجد رسوم سحب على جميع التحويلات، وسيتم توضيح المبلغ الإجمالي كامل وبدقة أثناء التواصل وقبل عملية التحويل.</div>
-      </div>
-
+      <!-- ========== قسم تسجيل بيانات الحجز المباشر ========== -->
       <div class="page-section">
         <h2 class="section-internal-title"><i class="fas fa-edit"></i> تسجيل بيانات الحجز المباشر</h2>
         <form id="bookingForm" onsubmit="sendToWhatsapp(event)">
-          <div class="form-group"><label for="studentName"><i class="fas fa-user"></i> اسم الخريج / الخريجة (رباعي بدقة):</label><input type="text" id="studentName" class="form-control" placeholder="اكتب اسمك رباعي كما سيطبع في الشهادة" required></div>
-          <div class="form-group"><label><i class="fas fa-money-bill-wave"></i> طريقة الدفع التي ترغب بها:</label><div class="radio-box-group"><div class="radio-tile active" onclick="selectRadio(this)"><input type="radio" name="payType" value="دفع كامل (1200 جنيه)" checked> دفع كامل (1200 جنيه)</div><div class="radio-tile" onclick="selectRadio(this)"><input type="radio" name="payType" value="دفع مقدم جدية حجز (600 جنيه)"> دفع مقدم (600 جنيه)</div></div></div>
-          <div class="form-group"><label for="extraCompanions"><i class="fas fa-user-plus"></i> عدد المرافقين الإضافيين المطلوبين (اكتب 0 في حال الاكتفاء بالمرافق المجاني):</label><input type="number" id="extraCompanions" class="form-control" min="0" value="0" required></div>
-          <div class="custom-alert alert-blue" style="background: #f8fafc; border-color: #cbd5e1; color: #334155; margin: 1.5rem 0;"><p style="font-weight: 700; color: #0c2d4b; margin-bottom: 0.5rem;"><i class="fas fa-info-circle"></i> تعليمات هامة لضمان حقك:</p><ul style="list-style: none; padding-right: 0; font-size: 0.92rem;"><li style="margin-bottom: 6px;"><i class="fas fa-comments" style="color: #3b82f6; margin-left: 8px;"></i> احتفظ بالمحادثة كاملة مع مسؤول التنظيم لضمان حقك المالي.</li><li style="margin-bottom: 6px;"><i class="fas fa-file-invoice-dollar" style="color: #e53e3e; margin-left: 8px;"></i> بعد أن يحسب لك المسؤول السعر الإجمالي بالرسوم وتحوّل، ضروري جداً إرسال لقطة شاشة للتحويل.</li><li style="margin-bottom: 6px;"><i class="fas fa-key" style="color: #fbbf24; margin-left: 8px;"></i> تأكد من استلام الكود الخاص بك؛ وبدونه لن تستلم الروب والمشتملات أو تدخل الحفلة.</li><li><i class="fas fa-users" style="color: #10b981; margin-left: 8px;"></i> تأكد من الانضمام لجروب حفلة تخرج (MIS) فور استلام كودك لمتابعة التعليمات.</li></ul></div>
-          <div style="margin-top: 1.5rem;"><button type="submit" class="btn-whatsapp-submit"><i class="fab fa-whatsapp fa-xl"></i> إرسال تفاصيل البيانات وتحديد السعر عبر واتساب</button></div>
+          <div class="form-group">
+            <label for="studentName"><i class="fas fa-user"></i> اسم الخريج / الخريجة (رباعي بدقة):</label>
+            <input type="text" id="studentName" class="form-control" placeholder="اكتب اسمك رباعي كما سيطبع في الشهادة" required>
+          </div>
+          
+          <div class="form-group">
+            <label><i class="fas fa-money-bill-wave"></i> طريقة الدفع التي ترغب بها:</label>
+            <div class="radio-box-group" id="paymentRadios">
+              <div class="radio-tile" onclick="selectRadio(this)">
+                <input type="radio" name="payType" value="دفع كامل (1200 جنيه)"> دفع كامل (1200 جنيه)
+              </div>
+              <div class="radio-tile" onclick="selectRadio(this)">
+                <input type="radio" name="payType" value="دفع مقدم جدية حجز (600 جنيه)"> دفع مقدم (600 جنيه)
+              </div>
+            </div>
+          </div>
+
+          <!-- السؤال لعدد المرافقين الإضافيين (يظهر فقط مع الدفع الكامل) لا يوجد اختيار افتراضي -->
+          <div id="companionQuestionContainer" style="display: none;">
+            <div class="form-group">
+              <label><i class="fas fa-question-circle"></i> هل يوجد مرافقين إضافيين غير المرافق المجاني؟</label>
+              <div class="inline-radio-group">
+                <label><input type="radio" name="hasExtraCompanions" value="yes" onchange="toggleExtraCompanionsField(true)"> نعم</label>
+                <label><input type="radio" name="hasExtraCompanions" value="no" onchange="toggleExtraCompanionsField(false)"> لا</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- حقل عدد المرافقين يظهر فقط في حالة اختيار "نعم" -->
+          <div id="extraCompanionsContainer" style="display: none;">
+            <div class="form-group">
+              <label for="extraCompanions"><i class="fas fa-user-plus"></i> عدد المرافقين الإضافيين:</label>
+              <input type="text" id="extraCompanions" class="form-control" placeholder="اكتب هنا عدد المرافقين بدون المرافق المجاني" inputmode="numeric" pattern="\d*" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            </div>
+          </div>
+
+          <!-- خانة عرض الإجمالي النهائي -->
+          <div id="totalBox" style="background: #f1f5f9; border-radius: 20px; padding: 1.2rem; margin-top: 1.2rem; text-align: center; font-weight: 800; display: none;">
+            <div style="font-size: 1.4rem; color: #0c2d4b;">الإجمالي النهائي شامل رسوم السحب: <span id="totalAmount" style="color: #b45309;">0</span> جنيه</div>
+          </div>
+
+          <div style="margin: 1.8rem 0 0.5rem;"></div>
+
+          <!-- بطاقة التحويل -->
+          <div class="payment-number-card">
+            <h3><i class="fas fa-exchange-alt"></i> قم بالتحويل عبر إنستا باي أو فودافون كاش</h3>
+            <p>على الرقم التالي، ثم أرسل إشعار التحويل مع البيانات</p>
+            <div>
+              <span class="unified-number">01025004123</span>
+              <button type="button" class="copy-btn-small" onclick="copyToClipboard('01025004123')"><i class="fas fa-copy"></i> نسخ الرقم</button>
+            </div>
+            <p style="font-size: 0.8rem; margin-top: 12px;">بعد التحويل سيتم إرسال كود الحجز الخاص بك</p>
+          </div>
+
+          <!-- تعليمات ضمان الحق -->
+          <div class="custom-alert alert-blue" style="background: #f8fafc; border-color: #cbd5e1; color: #334155; margin: 1rem 0;">
+            <p style="font-weight: 700; color: #0c2d4b; margin-bottom: 0.5rem;"><i class="fas fa-info-circle"></i> تعليمات هامة لضمان حقك:</p>
+            <ul style="list-style: none; padding-right: 0; font-size: 0.92rem;">
+              <li style="margin-bottom: 6px;"><i class="fas fa-comments" style="color: #3b82f6; margin-left: 8px;"></i> احتفظ بالمحادثة كاملة مع مسؤول التنظيم لضمان حقك المالي.</li>
+              <li style="margin-bottom: 6px;"><i class="fas fa-file-invoice-dollar" style="color: #e53e3e; margin-left: 8px;"></i> بعد أن يحسب لك المسؤول السعر الإجمالي بالرسوم وتحوّل، ضروري جداً إرسال لقطة شاشة للتحويل.</li>
+              <li style="margin-bottom: 6px;"><i class="fas fa-key" style="color: #fbbf24; margin-left: 8px;"></i> تأكد من استلام الكود الخاص بك؛ وبدونه لن تستلم الروب والمشتملات أو تدخل الحفلة.</li>
+              <li><i class="fas fa-users" style="color: #10b981; margin-left: 8px;"></i> تأكد من الانضمام لجروب حفلة تخرج (MIS) فور استلام كودك لمتابعة التعليمات.</li>
+            </ul>
+          </div>
+
+          <button type="submit" id="submitBookingBtn" class="btn-whatsapp-submit" disabled><i class="fab fa-whatsapp fa-xl"></i> إرسال تفاصيل البيانات وتحديد السعر</button>
         </form>
       </div>
+      <!-- ========== نهاية القسم ========== -->
 
-      <div class="page-section">
+      <!-- معرض مقتطفات الحفل السابق (تم تحسين شكله) -->
+      <div class="page-section gallery-section">
         <h2 class="section-internal-title"><i class="fas fa-images"></i> مقتطفات من الحفلة السابقة</h2>
         <div class="gallery-cards" id="galleryCardsContainer"></div>
-        <div class="gallery-hint"><i class="fas fa-hand-pointer"></i> اضغط على أي صورة لمشاهدة المزيد من المشاهد</div>
+        <div class="gallery-hint"><i class="fas fa-hand-pointer"></i> اضغط على أي صورة لفتح المعرض (بدون مغادرة الصفحة)</div>
       </div>
 
       <div class="footer-text">
@@ -606,14 +740,22 @@
   </div>
 </div>
 
+<!-- زر واتساب عائم في الزاوية اليسرى السفلية -->
+<div class="float-whatsapp" id="directWhatsappFloat">
+  <i class="fab fa-whatsapp"></i>
+</div>
+
 <div id="toast" class="toast-msg">✅ تم نسخ الرقم بنجاح</div>
 
 <!-- مودال المعرض الرئيسي -->
 <div id="fullGalleryModal" class="modal-gallery">
   <div class="modal-content-gallery">
     <div class="modal-header-gallery">
-      <h3><i class="fas fa-camera"></i> مقتطفات متنوعة | لقطات من الحفل السابق</h3>
-      <button class="close-modal-btn" id="closeModalBtn">&times;</button>
+      <h3><i class="fas fa-camera"></i> لقطات من الحفل السابق</h3>
+      <div class="gallery-actions">
+        <button class="mute-gallery-btn" id="muteGalleryBtn"><i class="fas fa-volume-up" id="galleryMuteIcon"></i></button>
+        <button class="close-modal-btn" id="closeModalBtn">&times;</button>
+      </div>
     </div>
     <div class="gallery-grid" id="galleryGridContainer"></div>
   </div>
@@ -634,113 +776,225 @@
 <audio id="galleryMusic" src="gallery-music.mp3" preload="auto" loop="false"></audio>
 
 <script>
-  // ---- المتغيرات العامة ----
+  // ---- ثوابت ومتغيرات عامة ----
   const TOTAL_IMAGES = 31;
   const IMAGE_BASE = "images/";
   const EXT = ".jpg";
   let currentPreviewIndex = 1;
-  let isMuted = false;       // حالة الكتم العام
-  let welcomePlayed = false; // منع إعادة تشغيل الترحيبي تلقائيًا أكثر من مرة
-
-  // ---- مراجع الأصوات ----
+  
+  let welcomeMuted = false;
+  let galleryMuted = false;
   const welcomeMusic = document.getElementById('welcomeMusic');
   const galleryMusic = document.getElementById('galleryMusic');
 
-  // ---- دالة تطبيق الكتم العام ----
-  function applyMuteState() {
-    if (isMuted) {
+  // كتم الترحيب
+  const welcomeMuteBtn = document.getElementById('muteWelcomeBtn');
+  const welcomeMuteIcon = document.getElementById('welcomeMuteIcon');
+  function toggleWelcomeMute() {
+    welcomeMuted = !welcomeMuted;
+    if (welcomeMuted) {
       welcomeMusic.pause();
-      galleryMusic.pause();
       welcomeMusic.muted = true;
-      galleryMusic.muted = true;
-      document.getElementById('globalMuteBtn').innerHTML = '<i class="fas fa-volume-mute"></i>';
+      welcomeMuteIcon.className = 'fas fa-volume-mute';
     } else {
       welcomeMusic.muted = false;
-      galleryMusic.muted = false;
-      document.getElementById('globalMuteBtn').innerHTML = '<i class="fas fa-volume-up"></i>';
-      // لا نعيد تشغيل أي شيء تلقائياً، فقط نرفع الكتم.
+      welcomeMuteIcon.className = 'fas fa-volume-up';
     }
   }
+  welcomeMuteBtn.addEventListener('click', toggleWelcomeMute);
 
-  // تبديل حالة الكتم
-  function toggleMute() {
-    isMuted = !isMuted;
-    applyMuteState();
+  const muteGalleryBtn = document.getElementById('muteGalleryBtn');
+  const galleryMuteIcon = document.getElementById('galleryMuteIcon');
+  function toggleGalleryMute() {
+    galleryMuted = !galleryMuted;
+    if (galleryMuted) {
+      galleryMusic.pause();
+      galleryMusic.muted = true;
+      galleryMuteIcon.className = 'fas fa-volume-mute';
+    } else {
+      galleryMusic.muted = false;
+      galleryMuteIcon.className = 'fas fa-volume-up';
+    }
   }
-  document.getElementById('globalMuteBtn').addEventListener('click', toggleMute);
+  muteGalleryBtn.addEventListener('click', toggleGalleryMute);
 
-  // ---- تشغيل الموسيقى الترحيبية (مرة واحدة، مع احترام الكتم) ----
-  function playWelcomeMusicOnce() {
-    if (isMuted) return;
-    if (welcomePlayed) return;
-    welcomeMusic.volume = 0.4;
-    welcomeMusic.play().then(() => {
-      welcomePlayed = true;
-      welcomeMusic.onended = () => { /* توقف تام */ };
-    }).catch(err => {
-      console.log("Welcome autoplay blocked, will play on interaction or manual.");
-    });
+  function calculateFee(amount) {
+    if (amount <= 0) return 0;
+    const thousands = Math.floor(amount / 1000);
+    const remainder = amount % 1000;
+    let fee = thousands * 10;
+    if (remainder > 0) {
+      if (remainder <= 500) fee += 5;
+      else fee += 10;
+    }
+    return fee;
   }
 
-  // ---- تشغيل يدوي (عن طريق الزر الجميل) ----
   function manualPlayWelcome() {
-    if (isMuted) {
-      // إذا كان مكتوماً نعطي إشعار بسيط
-      const toast = document.getElementById('toast');
-      toast.textContent = "🔇 الصوت مكتوم، ألغِ الكتم أولاً";
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 2000);
+    if (welcomeMuted) {
+      showToast("🔇 الموسيقى الترحيبية مكتومة، ألغِ الكتم أولاً");
       return;
     }
-    // نوقف الموسيقى الحالية ونعيد تشغيلها من البداية
     welcomeMusic.pause();
     welcomeMusic.currentTime = 0;
-    welcomeMusic.play().then(() => {
-      welcomePlayed = true; // تعتبر مشغولة الآن
-    }).catch(e => console.log);
+    welcomeMusic.play().catch(e => console.log("Playback error", e));
   }
 
-  // ---- تشغيل موسيقى المعرض (مع احترام الكتم) ----
   function playGalleryMusic() {
-    if (isMuted) return;
+    if (galleryMuted) return;
     galleryMusic.currentTime = 0;
-    galleryMusic.play().catch(e => console.log("Gallery music blocked"));
+    galleryMusic.play().catch(e => console.log("Gallery music play blocked"));
   }
+  function stopGalleryMusic() { galleryMusic.pause(); galleryMusic.currentTime = 0; }
 
-  function stopGalleryMusic() {
-    galleryMusic.pause();
-    galleryMusic.currentTime = 0;
-  }
-
-  // ---- نسخ الرقم ----
   function copyToClipboard(text) {
-    navigator.clipboard.writeText(text).then(() => {
-      const toast = document.getElementById('toast');
-      toast.textContent = "✅ تم نسخ الرقم بنجاح";
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 2000);
-    }).catch(() => alert("يرجى نسخ الرقم يدويًا: " + text));
+    navigator.clipboard.writeText(text).then(() => showToast("✅ تم نسخ الرقم بنجاح")).catch(() => alert("انسخ الرقم يدويًا: " + text));
+  }
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
   }
 
-  // ---- الراديو ----
+  // اختيار طريقة الدفع
   function selectRadio(element) {
     document.querySelectorAll('.radio-tile').forEach(tile => tile.classList.remove('active'));
     element.classList.add('active');
-    element.querySelector('input').checked = true;
+    const radio = element.querySelector('input');
+    radio.checked = true;
+    updateExtraCompanionsVisibility();
+    updateTotalDisplay();
+    validateFormAndEnableSubmit();
   }
 
-  // ---- واتساب ----
+  function updateExtraCompanionsVisibility() {
+    const selected = document.querySelector('input[name="payType"]:checked');
+    const questionDiv = document.getElementById('companionQuestionContainer');
+    const extraContainer = document.getElementById('extraCompanionsContainer');
+    if (selected && selected.value.includes('1200')) {
+      questionDiv.style.display = 'block';
+      const extraRadios = document.querySelectorAll('input[name="hasExtraCompanions"]');
+      extraRadios.forEach(radio => radio.checked = false);
+      extraContainer.style.display = 'none';
+    } else {
+      questionDiv.style.display = 'none';
+      extraContainer.style.display = 'none';
+    }
+  }
+
+  function toggleExtraCompanionsField(show) {
+    const extraContainer = document.getElementById('extraCompanionsContainer');
+    if (show) {
+      extraContainer.style.display = 'block';
+    } else {
+      extraContainer.style.display = 'none';
+      const companionsInput = document.getElementById('extraCompanions');
+      if (companionsInput) companionsInput.value = "";
+    }
+    updateTotalDisplay();
+    validateFormAndEnableSubmit();
+  }
+
+  function updateTotalDisplay() {
+    const selected = document.querySelector('input[name="payType"]:checked');
+    const totalBoxDiv = document.getElementById('totalBox');
+    const totalSpan = document.getElementById('totalAmount');
+    if (!selected) {
+      totalBoxDiv.style.display = 'none';
+      return;
+    }
+    let total = 0;
+    if (selected.value.includes('1200')) {
+      let base = 1200;
+      let companionsCount = 0;
+      const hasYes = document.querySelector('input[name="hasExtraCompanions"][value="yes"]:checked');
+      if (hasYes) {
+        const compInput = document.getElementById('extraCompanions');
+        let raw = compInput.value;
+        if (raw && !isNaN(parseInt(raw))) {
+          companionsCount = parseInt(raw);
+          if (companionsCount < 0) companionsCount = 0;
+        }
+      }
+      const companionsCost = companionsCount * 300;
+      const subtotal = base + companionsCost;
+      const fee = calculateFee(subtotal);
+      total = subtotal + fee;
+    } else {
+      const fee = calculateFee(600);
+      total = 600 + fee;
+    }
+    totalSpan.innerText = total;
+    totalBoxDiv.style.display = 'block';
+  }
+
+  function validateFormAndEnableSubmit() {
+    const submitBtn = document.getElementById('submitBookingBtn');
+    const studentName = document.getElementById('studentName').value.trim();
+    const selectedPayment = document.querySelector('input[name="payType"]:checked');
+    if (!studentName || !selectedPayment) {
+      submitBtn.disabled = true;
+      return;
+    }
+    if (selectedPayment.value.includes('1200')) {
+      const companionAnswer = document.querySelector('input[name="hasExtraCompanions"]:checked');
+      if (!companionAnswer) {
+        submitBtn.disabled = true;
+        return;
+      }
+      if (companionAnswer.value === 'yes') {
+        const companionsInput = document.getElementById('extraCompanions');
+        let companionsCount = companionsInput.value.trim();
+        if (companionsCount === "" || isNaN(parseInt(companionsCount)) || parseInt(companionsCount) < 0) {
+          submitBtn.disabled = true;
+          return;
+        }
+      }
+    }
+    submitBtn.disabled = false;
+  }
+
   function sendToWhatsapp(event) {
     event.preventDefault();
+    const submitBtn = document.getElementById('submitBookingBtn');
+    if (submitBtn.disabled) return;
+    
     const name = document.getElementById('studentName').value;
-    const payType = document.querySelector('input[name="payType"]:checked').value;
-    const companionsValue = document.getElementById('extraCompanions').value;
-    let companionsText = companionsValue == 0 ? "لا يوجد مرافقين إضافيين (اكتفاء بالمرافق المجاني)" : `${companionsValue} مرافق إضافي (${companionsValue * 300} جنيه إضافية)`;
-    const message = `السلام عليكم، أريد الحجز في حفلة تخرج MIS (دفعة 2026) 🎓%0A%0A📝 *بيانات الحجز المبدئية:*%0A• *اسم الخريج:* ${name}%0A• *نوع الدفع المختار:* ${payType}%0A• *عدد المرافقين الإضافيين:* ${companionsText}%0A%0A👉 (يرجى مراجعة البيانات وحساب إجمالي السعر مع الرسوم لإرسال التحويل والإسكرين)`;
+    const selectedRadio = document.querySelector('input[name="payType"]:checked');
+    if (!selectedRadio) return;
+    const payType = selectedRadio.value;
+    let total = 0;
+    let detailsMessage = "";
+    if (payType.includes('1200')) {
+      let companionsCount = 0;
+      const hasYes = document.querySelector('input[name="hasExtraCompanions"][value="yes"]:checked');
+      if (hasYes) {
+        const compInput = document.getElementById('extraCompanions');
+        let raw = compInput.value.trim();
+        if (raw && !isNaN(parseInt(raw))) companionsCount = parseInt(raw);
+        if (companionsCount < 0) companionsCount = 0;
+      }
+      const companionsCost = companionsCount * 300;
+      const subtotal = 1200 + companionsCost;
+      const fee = calculateFee(subtotal);
+      total = subtotal + fee;
+      detailsMessage = `دفع كامل (1200 جنيه) + ${companionsCount} مرافق إضافي (تكلفة ${companionsCost} جنيه) = إجمالي ${total} جنيه (شامل رسوم السحب ${fee} جنيه)`;
+    } else {
+      const fee = calculateFee(600);
+      total = 600 + fee;
+      detailsMessage = `دفع مقدم (600 جنيه) = إجمالي ${total} جنيه (شامل رسوم السحب ${fee} جنيه)`;
+    }
+    const message = `السلام عليكم، أريد الحجز في حفلة تخرج MIS (دفعة 2026) 🎓%0A%0A📝 *بيانات الحجز المبدئية:*%0A• *اسم الخريج:* ${name}%0A• *نوع الدفع:* ${payType}%0A• ${detailsMessage}%0A%0A👉 (يرجى مراجعة البيانات وتأكيد الإجمالي لإرسال التحويل إلى رقم 01025004123 إنستا باي أو فودافون كاش)`;
     window.open(`https://wa.me/201025004123?text=${message}`, '_blank');
   }
 
-  // ---- بناء المعرض ----
+  function directWhatsapp() {
+    const msg = `السلام عليكم، أحتاج إلى مساعدة أو استفسار بخصوص حفلة التخرج (MIS).`;
+    window.open(`https://wa.me/201025004123?text=${encodeURIComponent(msg)}`, '_blank');
+  }
+
+  // بناء المعرض المصغر (خمس صور)
   const cardsContainer = document.getElementById("galleryCardsContainer");
   for (let i = 1; i <= 5; i++) {
     const card = document.createElement("div");
@@ -748,7 +1002,7 @@
     const img = document.createElement("img");
     img.src = `${IMAGE_BASE}${i}${EXT}`;
     img.alt = `لقطة من الحفل السابق ${i}`;
-    img.onerror = function() { this.src = "https://placehold.co/300x300/0c2d4b/fbbf24?text=" + i; };
+    img.onerror = function() { this.src = "https://placehold.co/500x500/0c2d4b/fbbf24?text=" + i; };
     card.appendChild(img);
     card.addEventListener("click", () => openFullGallery());
     cardsContainer.appendChild(card);
@@ -767,7 +1021,7 @@
       const imgEl = document.createElement("img");
       imgEl.src = imgSrc;
       imgEl.alt = `صورة ${i}`;
-      imgEl.onerror = function() { this.src = `https://placehold.co/300x300/1e293b/fbbf24?text=${i}`; };
+      imgEl.onerror = function() { this.src = `https://placehold.co/500x500/1e293b/fbbf24?text=${i}`; };
       item.appendChild(imgEl);
       item.addEventListener("click", (e) => {
         e.stopPropagation();
@@ -778,26 +1032,33 @@
     }
   }
 
+  let isGalleryOpen = false;
   function openFullGallery() {
     if (galleryGrid.children.length === 0) fillGalleryGrid();
     modal.style.display = "flex";
     document.body.style.overflow = "hidden";
-    // إيقاف الترحيبي مؤقتًا وتشغيل موسيقى المعرض
     welcomeMusic.pause();
     playGalleryMusic();
+    isGalleryOpen = true;
+    history.pushState({ galleryOpen: true }, "", window.location.href);
   }
 
   function closeGalleryModal() {
     modal.style.display = "none";
     document.body.style.overflow = "";
     stopGalleryMusic();
-    // لا نعيد تشغيل الترحيبي تلقائياً بعد إغلاق المعرض
+    isGalleryOpen = false;
+    if (history.state && history.state.galleryOpen) history.back();
   }
+
+  window.addEventListener('popstate', function(event) {
+    if (isGalleryOpen) { closeGalleryModal(); event.preventDefault(); history.pushState({ galleryOpen: true }, "", window.location.href); }
+  });
   closeModalBtn.addEventListener("click", closeGalleryModal);
   modal.addEventListener("click", (e) => { if (e.target === modal) closeGalleryModal(); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && modal.style.display === "flex") closeGalleryModal(); });
 
-  // ---- معاينة الصورة بالتنقل ----
+  // تكبير الصورة
   const previewModal = document.getElementById("imagePreviewModal");
   const previewImage = document.getElementById("previewImage");
   const prevBtn = document.getElementById("prevImageBtn");
@@ -808,7 +1069,7 @@
   function updatePreviewImage() {
     const src = `${IMAGE_BASE}${currentPreviewIndex}${EXT}`;
     previewImage.src = src;
-    previewImage.onerror = function() { this.src = `https://placehold.co/800x800/1e293b/fbbf24?text=${currentPreviewIndex}`; };
+    previewImage.onerror = function() { this.src = `https://placehold.co/1000x800/1e293b/fbbf24?text=${currentPreviewIndex}`; };
     counterSpan.textContent = `صورة ${currentPreviewIndex} من ${TOTAL_IMAGES}`;
   }
   function openImagePreview() {
@@ -820,14 +1081,8 @@
     previewModal.style.display = "none";
     document.body.style.overflow = "";
   }
-  function nextImage() {
-    currentPreviewIndex = (currentPreviewIndex % TOTAL_IMAGES) + 1;
-    updatePreviewImage();
-  }
-  function prevImage() {
-    currentPreviewIndex = (currentPreviewIndex - 2 + TOTAL_IMAGES) % TOTAL_IMAGES + 1;
-    updatePreviewImage();
-  }
+  function nextImage() { currentPreviewIndex = (currentPreviewIndex % TOTAL_IMAGES) + 1; updatePreviewImage(); }
+  function prevImage() { currentPreviewIndex = (currentPreviewIndex - 2 + TOTAL_IMAGES) % TOTAL_IMAGES + 1; updatePreviewImage(); }
   prevBtn.addEventListener("click", (e) => { e.stopPropagation(); prevImage(); });
   nextBtn.addEventListener("click", (e) => { e.stopPropagation(); nextImage(); });
   closePreviewBtn.addEventListener("click", closeImagePreview);
@@ -839,27 +1094,24 @@
       else if (e.key === "Escape") { closeImagePreview(); e.preventDefault(); }
     }
   });
-
-  // ---- محاولة التشغيل التلقائي للترحيبي عند التحميل (قد تمنع المتصفحات) ----
-  window.addEventListener('load', () => {
-    playWelcomeMusicOnce();
-    // في حالة المنع، نربط أول تفاعل لتشغيلها (بدون رسائل، لكن المستخدم سيلاحظ)
-    const firstInteraction = () => {
-      if (!welcomePlayed && !isMuted) {
-        welcomeMusic.play().catch(e=>console.log);
-        welcomePlayed = true;
-      }
-      document.removeEventListener('click', firstInteraction);
-      document.removeEventListener('touchstart', firstInteraction);
-      document.removeEventListener('scroll', firstInteraction);
-    };
-    document.addEventListener('click', firstInteraction);
-    document.addEventListener('touchstart', firstInteraction);
-    document.addEventListener('scroll', firstInteraction);
+  let touchStartX = 0, touchEndX = 0;
+  previewModal.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; });
+  previewModal.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    if (touchEndX < touchStartX - 50) nextImage();
+    else if (touchEndX > touchStartX + 50) prevImage();
   });
 
-  // ربط الزر اليدوي
+  // ربط الأحداث
+  document.getElementById('studentName').addEventListener('input', validateFormAndEnableSubmit);
+  const extraCompanionsField = document.getElementById('extraCompanions');
+  if (extraCompanionsField) {
+    extraCompanionsField.addEventListener('input', () => { updateTotalDisplay(); validateFormAndEnableSubmit(); });
+  }
+  const radiosYesNo = document.querySelectorAll('input[name="hasExtraCompanions"]');
+  radiosYesNo.forEach(radio => radio.addEventListener('change', () => { updateTotalDisplay(); validateFormAndEnableSubmit(); }));
   document.getElementById('manualPlayBtn').addEventListener('click', manualPlayWelcome);
+  document.getElementById('directWhatsappFloat').addEventListener('click', directWhatsapp);
 </script>
 </body>
 </html>
