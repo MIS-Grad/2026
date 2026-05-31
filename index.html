@@ -2,13 +2,9 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
-  <title>حفلة تخرج MIS 2026 | احجز الآن</title>
-  <meta property="og:title" content="تفاصيل حفلة تخرج نظم - احجز مكانك الآن">
-  <meta property="og:description" content="حفلة تخرج دفعة MIS 2026، أماكن محدودة. سجل الآن بوضوح وسهولة.">
-  <meta property="og:image" content="https://mis-grad.github.io/2026/og-preview.jpg">
-  <meta property="og:url" content="https://mis-grad.github.io/2026/">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>MIS 2026 | حفل التخرج</title>
+  <meta name="description" content="حفلة تخرج دفعة MIS 2026 - تسجيل سريع ومباشر">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,514 +14,426 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent;
     }
 
     body {
       font-family: 'Cairo', sans-serif;
-      background: #f1f5f9;
-      color: #0f172a;
-      line-height: 1.5;
+      background: #f4f6f9;
+      color: #1e293b;
+      line-height: 1.45;
       padding: 16px 12px;
-      font-size: 16px; /* قاعدة أساسية */
+      font-size: 15px;
     }
 
-    /* حاوية رئيسية تتناسب مع الهاتف */
+    /* حاوية رئيسية ضيقة وأنيقة */
     .container {
-      max-width: 100%;
+      max-width: 560px;
       margin: 0 auto;
-      padding: 0;
     }
 
-    /* البطاقة الرئيسية بدون حواف حادة */
-    .main-card {
+    /* بطاقة رئيسية خفيفة */
+    .card {
       background: #ffffff;
-      border-radius: 32px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      border-radius: 28px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
       overflow: hidden;
+      margin-bottom: 16px;
     }
 
-    /* منطقة الهيرو - تركيز على الهاتف */
+    /* رأس بسيط */
     .hero {
-      background: #0c2d4b;
-      padding: 32px 20px 28px;
+      background: #0f2b3d;
+      padding: 28px 20px;
       text-align: center;
       color: white;
-      border-bottom: 4px solid #fbbf24;
     }
-    .hero i.fa-graduation-cap {
-      font-size: 2.8rem;
+    .hero i {
+      font-size: 2.4rem;
       background: #fbbf24;
-      padding: 16px;
-      border-radius: 60px;
-      color: #0c2d4b;
-      margin-bottom: 16px;
+      padding: 12px;
+      border-radius: 50%;
+      color: #0f2b3d;
+      margin-bottom: 12px;
       display: inline-block;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
     .hero h1 {
-      font-size: 1.9rem;
+      font-size: 1.7rem;
       font-weight: 800;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       letter-spacing: -0.3px;
-      word-break: keep-all;
     }
-    .date-venue-box {
-      background: rgba(255,255,255,0.15);
-      border-radius: 50px;
-      padding: 12px 16px;
-      display: flex;
+    .hero .date {
+      background: rgba(255,255,255,0.12);
+      padding: 6px 12px;
+      border-radius: 40px;
+      display: inline-flex;
+      gap: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-top: 12px;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 16px;
-      margin-top: 12px;
-      font-weight: 700;
-      font-size: 0.9rem;
     }
-    .date-venue-box span {
-      display: inline-flex;
+
+    /* المحتوى الداخلي - مساحات مريحة */
+    .content {
+      padding: 20px 16px;
+    }
+
+    /* أزرار الموسيقى - صغيرة ولطيفة */
+    .music-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .music-btn {
+      flex: 1;
+      background: #f1f3f7;
+      border: none;
+      border-radius: 60px;
+      padding: 10px;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: #334155;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .music-btn i { font-size: 1rem; }
+    .music-btn:active { background: #e2e8f0; }
+
+    /* كل قسم - خلفية بيضاء ناصعة وحدود خفيفة */
+    .section {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 18px 16px;
+      margin-bottom: 18px;
+      border: 1px solid #edf2f7;
+    }
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #0f2b3d;
+      display: flex;
       align-items: center;
       gap: 8px;
+      margin-bottom: 14px;
+      border-right: 3px solid #fbbf24;
+      padding-right: 12px;
     }
-    .hero-note {
-      margin-top: 18px;
-      font-weight: 800;
-      color: #fef08a;
-      font-size: 1rem;
-      background: rgba(0,0,0,0.2);
-      display: inline-block;
-      padding: 6px 18px;
-      border-radius: 60px;
-    }
-
-    /* محتوى داخلي */
-    .content {
-      padding: 20px 16px 24px;
-    }
-
-    /* أزرار الموسيقى / سهلة اللمس */
-    .music-control-area {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 28px;
-      flex-wrap: wrap;
-    }
-    .manual-music-trigger, .mute-welcome-btn {
-      background: #fff8ed;
-      border: 2px solid #fbbf24;
-      border-radius: 60px;
-      padding: 12px 20px;
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      color: #b45309;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.2s;
-      flex: 1;
-      justify-content: center;
-      min-width: 140px;
-    }
-    .mute-welcome-btn {
-      background: #f1f5f9;
-      border-color: #94a3b8;
-      color: #1e293b;
-    }
-    .manual-music-trigger i, .mute-welcome-btn i {
-      font-size: 1.4rem;
-    }
-
-    /* كل قسم مريح للعين */
-    .page-section {
-      background: #ffffff;
-      border: 1px solid #e9edf2;
-      border-radius: 28px;
-      padding: 20px 16px;
-      margin-bottom: 24px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-    }
-    .section-internal-title {
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: #0c2d4b;
-      margin-bottom: 18px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-bottom: 2px solid #f1f5f9;
-      padding-bottom: 10px;
-    }
-    .section-internal-title i {
+    .section-title i {
       color: #fbbf24;
-      font-size: 1.4rem;
+      font-size: 1.1rem;
     }
 
-    /* شبكة العروض */
-    .items-flat-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    /* شبكة الباقات */
+    .pack-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0;
+    }
+    .pack-item {
+      background: #f8fafc;
+      border-radius: 18px;
+      padding: 10px 12px;
+      flex: 1 0 auto;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: #1e293b;
+      border: 1px solid #eef2f6;
+    }
+    .pack-item i {
+      display: block;
+      margin-bottom: 5px;
+      color: #f59e0b;
+    }
+    .free-badge {
+      background: #e6f7ec;
+      border-color: #bbf7d0;
+      color: #166534;
+    }
+
+    /* خيارات الدفع كبطاقات بسيطة */
+    .pay-row {
+      display: flex;
+      flex-direction: column;
       gap: 12px;
       margin: 16px 0;
     }
-    .flat-badge {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      padding: 14px 6px;
+    .pay-card {
+      background: #fefcf5;
+      border: 1px solid #fde68a;
       border-radius: 20px;
-      text-align: center;
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: #1e293b;
+      padding: 12px;
     }
-    .flat-badge i {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 1.3rem;
-      color: #fbbf24;
-    }
-    .free-companion {
-      background: #ecfdf5;
-      border-color: #10b981;
-      color: #065f46;
-    }
-
-    /* خيارات الدفع بسهولة */
-    .payment-options-flex {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin: 20px 0;
-    }
-    .pay-opt-rect {
-      background: #fdfdfd;
-      border: 1px solid #cbd5e1;
-      padding: 16px;
-      border-radius: 24px;
-    }
-    .pay-opt-rect h4 {
+    .pay-card h4 {
       font-weight: 800;
-      color: #0c2d4b;
-      font-size: 1.1rem;
-      margin-bottom: 8px;
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 6px;
+      margin-bottom: 4px;
     }
-    .pay-opt-rect h4 span {
-      background: #fffbeb;
+    .pay-card span {
+      background: #fef3c7;
+      padding: 2px 12px;
+      border-radius: 30px;
+      font-size: 0.8rem;
       color: #b45309;
-      padding: 4px 14px;
-      border-radius: 40px;
-      font-size: 0.9rem;
+    }
+    .pay-card p {
+      font-size: 0.8rem;
+      color: #475569;
     }
 
-    /* التنبيهات - خط واضح */
-    .custom-alert {
-      border-right: 5px solid;
-      padding: 14px;
+    /* التنبيهات - ألوان خفيفة */
+    .alert {
+      padding: 12px;
       border-radius: 20px;
-      margin-top: 14px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
-    .alert-red { background: #fff5f5; border-color: #e53e3e; color: #9b2c2c; }
-    .alert-amber { background: #fffbeb; border-color: #f59e0b; color: #78350f; }
-    .alert-blue { background: #f0f9ff; border-color: #3b82f6; color: #1e40af; }
-
-    /* نموذج الحجز كبير وواضح */
-    .form-group {
-      margin-bottom: 22px;
-    }
-    .form-group label {
-      display: block;
-      font-weight: 800;
-      color: #0c2d4b;
-      margin-bottom: 10px;
-      font-size: 1rem;
-    }
-    .form-control {
-      width: 100%;
-      font-family: 'Cairo', sans-serif;
-      padding: 14px 16px;
-      border: 2px solid #cbd5e1;
-      border-radius: 24px;
-      font-size: 1rem;
+      font-size: 0.8rem;
       font-weight: 500;
-      background: white;
-      transition: 0.2s;
+      margin: 14px 0;
+      border-right: 3px solid;
     }
-    .form-control:focus {
-      border-color: #0c2d4b;
-      outline: none;
-      background: #fefce8;
+    .alert-warning {
+      background: #fffbeb;
+      border-color: #f59e0b;
+      color: #78350f;
+    }
+    .alert-danger {
+      background: #fef2f2;
+      border-color: #ef4444;
+      color: #991b1b;
+    }
+    .alert-info {
+      background: #f0f9ff;
+      border-color: #3b82f6;
+      color: #1e3a8a;
     }
 
-    /* الراديو بشكل مربعات لمسية كبيرة */
-    .radio-box-group {
+    /* النموذج */
+    .form-group {
+      margin-bottom: 18px;
+    }
+    label {
+      font-weight: 700;
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.85rem;
+      color: #334155;
+    }
+    input, .radio-group {
+      width: 100%;
+    }
+    .input-field {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 24px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      background: white;
+      transition: 0.15s;
+    }
+    .input-field:focus {
+      border-color: #fbbf24;
+      outline: none;
+      background: #fffbee;
+    }
+    .radio-group {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 10px;
     }
-    .radio-tile {
+    .radio-option {
       background: #f9fafb;
-      border: 2px solid #cbd5e1;
+      border: 1.5px solid #e2e8f0;
       border-radius: 28px;
-      padding: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.15s;
+      padding: 12px;
       text-align: center;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.1s;
     }
-    .radio-tile.active {
+    .radio-option.active {
       border-color: #10b981;
       background: #ecfdf5;
       color: #065f46;
     }
-    .inline-radio-group {
+    .inline-radio {
       display: flex;
-      gap: 24px;
+      gap: 20px;
       align-items: center;
       margin-top: 8px;
-      flex-wrap: wrap;
     }
-    .inline-radio-group label {
+    .inline-radio label {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      font-size: 1rem;
+      gap: 6px;
+      font-weight: 600;
       margin: 0;
-      cursor: pointer;
-    }
-    input[type="radio"] {
-      width: 20px;
-      height: 20px;
-      accent-color: #fbbf24;
     }
 
-    /* الإجمالي واضح */
-    #totalBox {
+    /* الإجمالي */
+    .total-box {
       background: #f1f5f9;
-      border-radius: 28px;
-      padding: 18px;
-      margin: 18px 0;
+      border-radius: 24px;
+      padding: 12px;
       text-align: center;
       font-weight: 800;
+      margin: 16px 0;
+      font-size: 1rem;
     }
-    #totalAmount {
-      font-size: 1.8rem;
+    .total-number {
+      font-size: 1.6rem;
       color: #b45309;
-      font-weight: 900;
-      display: inline-block;
-      margin: 0 6px;
+      margin: 0 4px;
     }
 
-    /* بطاقة التحويل برقم كبير */
-    .payment-number-card {
-      background: linear-gradient(135deg, #f8fafc, #ffffff);
-      border-radius: 32px;
-      padding: 20px 16px;
-      margin: 20px 0;
+    /* رقم التحويل */
+    .transfer-card {
+      background: #fafcff;
+      border-radius: 24px;
+      padding: 16px;
       text-align: center;
-      border: 2px solid #e2e8f0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      border: 1px solid #e9edf2;
+      margin: 16px 0;
     }
-    .unified-number {
+    .big-number {
       font-family: monospace;
-      font-size: 2rem;
+      font-size: 1.9rem;
       font-weight: 900;
-      background: #0c2d4b;
+      background: #0f2b3d;
       color: #fbbf24;
-      padding: 8px 18px;
+      padding: 6px 12px;
       border-radius: 60px;
       display: inline-block;
       letter-spacing: 2px;
-      margin: 12px 0;
-      word-break: break-word;
+      margin: 8px 0;
     }
-    .copy-btn-small {
+    .copy-btn {
       background: #fbbf24;
       border: none;
-      padding: 10px 24px;
-      border-radius: 60px;
-      font-weight: 800;
-      font-size: 0.9rem;
-      cursor: pointer;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-weight: 700;
       margin-right: 8px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+      cursor: pointer;
+      font-size: 0.75rem;
     }
 
-    /* زر واتساب الرئيسي كبير */
-    .btn-whatsapp-submit {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
+    /* زر واتساب */
+    .whatsapp-btn {
       background: #25D366;
       color: white;
       border: none;
-      font-family: 'Cairo', sans-serif;
-      font-weight: 800;
-      font-size: 1.2rem;
-      padding: 16px 12px;
-      border-radius: 60px;
-      cursor: pointer;
       width: 100%;
-      margin-top: 8px;
-      transition: 0.2s;
-    }
-    .btn-whatsapp-submit:disabled {
-      background: #9bc9ab;
-      cursor: not-allowed;
-      opacity: 0.7;
-    }
-
-    /* زر واتس عائم - مناسب للمس */
-    .float-whatsapp {
-      position: fixed;
-      bottom: 22px;
-      left: 22px;
-      background: #25D366;
-      color: white;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
+      padding: 14px;
+      border-radius: 60px;
+      font-weight: 800;
+      font-size: 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      gap: 10px;
+      margin-top: 8px;
       cursor: pointer;
-      z-index: 1100;
       transition: 0.2s;
-      border: none;
+    }
+    .whatsapp-btn:disabled {
+      background: #a0cfb5;
+      cursor: not-allowed;
     }
 
-    /* معرض الصور - مناسب للهاتف */
-    .gallery-cards {
+    /* معرض الصور - شبكة خفيفة */
+    .gallery-grid-small {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin: 20px 0;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 16px 0;
     }
-    .gallery-card {
-      border-radius: 24px;
-      overflow: hidden;
-      background: #f1f5f9;
+    .gallery-thumb {
       aspect-ratio: 1 / 1;
+      background: #f1f5f9;
+      border-radius: 20px;
+      overflow: hidden;
       cursor: pointer;
-      border: 2px solid #fde68a;
-      transition: 0.2s;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+      border: 1px solid #fde68a;
     }
-    .gallery-card img {
+    .gallery-thumb img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
     }
-    .gallery-hint {
+    .hint-text {
+      font-size: 0.7rem;
       text-align: center;
-      font-size: 0.85rem;
-      background: #fef9e6;
-      padding: 8px 12px;
-      border-radius: 60px;
-      display: inline-block;
-      width: auto;
-      margin: 10px auto 0;
+      color: #64748b;
+      margin-top: 8px;
     }
 
-    /* المودالات بالكامل مصممة للهاتف */
-    .modal-gallery {
+    /* مودالات بسيطة */
+    .modal, .preview-modal {
       display: none;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.96);
+      background: rgba(0,0,0,0.95);
       z-index: 2000;
       justify-content: center;
       align-items: center;
     }
-    .modal-content-gallery {
+    .modal-inner {
       background: #0f172a;
-      width: 96%;
-      height: 90%;
-      border-radius: 36px;
+      width: 94%;
+      height: 88%;
+      border-radius: 32px;
       padding: 16px;
       display: flex;
       flex-direction: column;
     }
-    .modal-header-gallery {
+    .modal-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #334155;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
-    }
-    .modal-header-gallery h3 {
       color: #fbbf24;
-      font-size: 1.3rem;
+      margin-bottom: 14px;
+      font-weight: 800;
     }
-    .close-modal-btn, .mute-gallery-btn {
-      width: 48px;
-      height: 48px;
-      border-radius: 48px;
-      background: #dc2626;
+    .modal-header button {
+      background: #ef4444;
       border: none;
-      font-size: 1.8rem;
       color: white;
+      width: 42px;
+      height: 42px;
+      border-radius: 42px;
+      font-size: 1.6rem;
       cursor: pointer;
     }
-    .mute-gallery-btn { background: #f59e0b; color: #0c2d4b; }
-    .gallery-grid {
+    .gallery-grid-full {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 12px;
       overflow-y: auto;
       flex: 1;
-      padding: 4px;
     }
-    .gallery-grid-item {
+    .full-img-item {
       background: #1e293b;
       border-radius: 20px;
       aspect-ratio: 1/1;
       overflow: hidden;
       cursor: pointer;
-      border: 2px solid transparent;
     }
-    .gallery-grid-item img {
+    .full-img-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    /* مودال عرض الصورة مكبرة */
-    .image-preview-modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: black;
-      z-index: 2100;
-      justify-content: center;
-      align-items: center;
     }
     .preview-container {
       position: relative;
@@ -538,347 +446,364 @@
     .preview-container img {
       max-width: 92%;
       max-height: 80%;
-      object-fit: contain;
-      border-radius: 20px;
+      border-radius: 24px;
     }
     .nav-btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       background: rgba(0,0,0,0.6);
-      color: white;
-      width: 48px;
-      height: 48px;
-      border-radius: 48px;
-      font-size: 2rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 44px;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 1.8rem;
+      color: white;
       cursor: pointer;
     }
-    .prev-btn { left: 12px; }
-    .next-btn { right: 12px; }
+    .prev { left: 12px; }
+    .next { right: 12px; }
     .close-preview {
       position: absolute;
       top: 20px;
       left: 20px;
       background: rgba(0,0,0,0.6);
-      width: 48px;
-      height: 48px;
-      border-radius: 48px;
+      width: 44px;
+      height: 44px;
+      border-radius: 44px;
       font-size: 2rem;
-      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
+      color: white;
       cursor: pointer;
     }
     .counter {
       position: absolute;
       bottom: 20px;
-      background: rgba(0,0,0,0.7);
-      padding: 6px 16px;
-      border-radius: 40px;
+      background: #000000aa;
+      padding: 4px 12px;
+      border-radius: 30px;
       color: #fbbf24;
-      font-weight: 800;
+      font-weight: 700;
     }
-    .footer-text {
+    .footer {
+      font-size: 0.7rem;
       text-align: center;
-      font-size: 0.75rem;
-      color: #64748b;
-      padding-top: 20px;
-      margin-top: 16px;
-      border-top: 1px solid #e2e8f0;
+      color: #94a3b8;
+      margin-top: 24px;
     }
-    .toast-msg {
+    .float-wa {
       position: fixed;
-      bottom: 90px;
+      bottom: 18px;
+      left: 18px;
+      background: #25D366;
+      width: 52px;
+      height: 52px;
+      border-radius: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      cursor: pointer;
+      z-index: 1100;
+    }
+    .toast {
+      position: fixed;
+      bottom: 80px;
       left: 50%;
       transform: translateX(-50%) translateY(100px);
       background: #059669;
       color: white;
-      padding: 10px 24px;
+      padding: 6px 18px;
       border-radius: 60px;
-      font-weight: 700;
-      z-index: 2200;
+      font-weight: 600;
       transition: 0.2s;
+      z-index: 2200;
+      font-size: 0.8rem;
     }
-    .toast-msg.show {
-      transform: translateX(-50%) translateY(0);
-    }
-
-    /* تحسينات إضافية للشاشات المتوسطة */
-    @media (min-width: 640px) {
-      body { padding: 24px; }
-      .container { max-width: 680px; margin: 0 auto; }
-      .gallery-cards { grid-template-columns: repeat(3, 1fr); }
-      .radio-box-group { flex-direction: row; }
-      .radio-tile { flex: 1; }
-      .payment-options-flex { flex-direction: row; }
-    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
     @media (max-width: 480px) {
-      .hero h1 { font-size: 1.6rem; }
-      .unified-number { font-size: 1.6rem; padding: 6px 12px; }
-      .btn-whatsapp-submit { font-size: 1rem; }
-    }
-    /* ضبط النصوص العامة */
-    p, li, .flat-badge, .pay-opt-rect p {
-      font-size: 0.95rem;
-    }
-    ul li {
-      margin-bottom: 8px;
+      .gallery-grid-small { grid-template-columns: repeat(3, 1fr); }
+      .hero h1 { font-size: 1.5rem; }
     }
   </style>
 </head>
 <body>
-
 <div class="container">
-  <div class="main-card">
+  <div class="card">
     <div class="hero">
       <i class="fas fa-graduation-cap"></i>
-      <h1>حفلة تخرج MIS 2026</h1>
-      <div class="date-venue-box">
-        <span><i class="fas fa-calendar-alt"></i> السبت 5 سبتمبر 2026</span>
-        <span><i class="fas fa-map-marker-alt"></i> فندق The Guard (دار قوات حرس الحدود)</span>
+      <h1>تخرج MIS 2026</h1>
+      <div class="date">
+        <span><i class="fas fa-calendar"></i> 5 سبتمبر 2026</span>
+        <span><i class="fas fa-location-dot"></i> فندق The Guard</span>
       </div>
-      <p class="hero-note">🎟️ الأعداد محدودة – احجز مبكراً</p>
+      <div style="margin-top:10px; font-size:0.75rem; background:#ffffff20; display:inline-block; padding:4px 14px; border-radius:30px;">🎟️ عدد محدود</div>
     </div>
-
     <div class="content">
-      <div class="music-control-area">
-        <div class="manual-music-trigger" id="manualPlayBtn"><i class="fas fa-music"></i> تشغيل الموسيقى</div>
-        <div class="mute-welcome-btn" id="muteWelcomeBtn"><i class="fas fa-volume-up" id="welcomeMuteIcon"></i> كتم/تشغيل</div>
+      <!-- أزرار موسيقى خفيفة -->
+      <div class="music-row">
+        <button class="music-btn" id="playMusicBtn"><i class="fas fa-play"></i> تشغيل ترحيب</button>
+        <button class="music-btn" id="muteMusicBtn"><i class="fas fa-volume-up" id="muteIcon"></i> كتم</button>
       </div>
 
-      <!-- خيارات الخريجين -->
-      <div class="page-section">
-        <h2 class="section-internal-title"><i class="fas fa-user-grad"></i> خيارات ورسوم الخريجين</h2>
-        <div class="items-flat-grid">
-          <div class="flat-badge"><i class="fas fa-user-tie"></i>الروب</div>
-          <div class="flat-badge"><i class="fas fa-graduation-cap"></i>الكاب</div>
-          <div class="flat-badge"><i class="fas fa-award"></i>درع التخرج</div>
-          <div class="flat-badge"><i class="fas fa-certificate"></i>شهادة تقدير</div>
-          <div class="flat-badge free-companion"><i class="fas fa-user-plus"></i>مرافق مجاني</div>
+      <!-- حزمة الخريج -->
+      <div class="section">
+        <div class="section-title"><i class="fas fa-user-graduate"></i> تذكرة الخريج</div>
+        <div class="pack-grid">
+          <div class="pack-item"><i class="fas fa-tshirt"></i>روب</div>
+          <div class="pack-item"><i class="fas fa-graduation-cap"></i>كاب</div>
+          <div class="pack-item"><i class="fas fa-trophy"></i>درع</div>
+          <div class="pack-item"><i class="fas fa-certificate"></i>شهادة</div>
+          <div class="pack-item free-badge"><i class="fas fa-user-friends"></i>مرافق مجاني</div>
         </div>
-        <div class="payment-options-flex">
-          <div class="pay-opt-rect"><h4>الخيار الأول <span>1200 جنيه</span></h4><p>دفع كامل التذكرة دفعة واحدة عند الحجز.</p></div>
-          <div class="pay-opt-rect"><h4>الخيار الثاني <span>600 جنيه</span></h4><p>مقدم جدية حجز، ويتبقى 600 خلال شهر.</p></div>
+        <div class="pay-row">
+          <div class="pay-card"><h4>دفعة كاملة <span>1200 ج</span></h4><p>تسديد كامل التذكرة فور الحجز</p></div>
+          <div class="pay-card"><h4>مقدم حجز <span>600 ج</span></h4><p>يتبقى 600 ج خلال شهر</p></div>
         </div>
-        <div class="custom-alert alert-amber"><i class="fas fa-clock"></i> <strong>ترتيب المنصة:</strong> حسب أسبقية الحجز.</div>
-        <div class="custom-alert alert-red"><i class="fas fa-exclamation-circle"></i> <strong>هام:</strong> عدم استكمال المبلغ = لا استرداد للمقدم، لبدء تجهيز المستلزمات فور التسجيل.</div>
+        <div class="alert alert-warning"><i class="fas fa-sort-amount-down"></i> ترتيب المنصة حسب أسبقية الحجز</div>
+        <div class="alert alert-danger"><i class="fas fa-exclamation-triangle"></i> عدم استكمال المبلغ = عدم استرداد المقدم (يتم تجهيز المستلزمات فور التسجيل)</div>
       </div>
 
-      <!-- تفاصيل المرافقين -->
-      <div class="page-section">
-        <h2 class="section-internal-title"><i class="fas fa-users"></i> حجز المرافقين الإضافيين</h2>
-        <div style="background:#fffbeb; border-radius:24px; padding:14px; text-align:center; margin-bottom:16px;"><span style="font-weight:800; font-size:1.2rem;">سعر التذكرة الإضافية: 300 جنيه للشخص</span></div>
-        <div class="custom-alert alert-blue">
-          <ul style="list-style:none; padding-right:0;">
-            <li><i class="fas fa-check-circle" style="color:#10b981; margin-left:8px;"></i> عدد المرافقين مفتوح (أي عدد).</li>
-            <li><i class="fas fa-check-circle" style="color:#10b981; margin-left:8px;"></i> لا يمكن حجز مرافقين إلا بعد استكمال الحجز الأساسي للخريج أولاً.</li>
-            <li><i class="fas fa-child" style="color:#ea580c; margin-left:8px;"></i> الأطفال فوق 3 سنوات يحسبون تذكرة مرافق كاملة.</li>
-          </ul>
+      <!-- مرافقين -->
+      <div class="section">
+        <div class="section-title"><i class="fas fa-users"></i> مرافقين إضافيين</div>
+        <div style="background:#fffbeb; border-radius: 20px; padding: 8px; text-align: center; font-weight: 800; margin-bottom: 12px;">تذكرة المرافق الإضافي: 300 جنيه</div>
+        <div class="alert alert-info" style="font-size:0.75rem;">
+          ✅ عدد غير محدود | ✅ لا يمكن حجزهم إلا بعد الحجز الأساسي للخريج | ✅ الطفل بعد 3 سنوات = تذكرة كاملة
         </div>
-        <div class="custom-alert alert-amber"><i class="fas fa-exclamation-triangle"></i> يفضل حجز المرافقين مبكراً قبل اكتمال سعة القاعة.</div>
       </div>
 
-      <!-- نموذج الحجز المباشر (مبسط ومريح) -->
-      <div class="page-section">
-        <h2 class="section-internal-title"><i class="fas fa-edit"></i> تسجيل بيانات الحجز</h2>
-        <form id="bookingForm" onsubmit="sendToWhatsapp(event)">
+      <!-- نموذج الحجز المبسط -->
+      <div class="section">
+        <div class="section-title"><i class="fas fa-edit"></i> بيانات الحجز</div>
+        <form id="bookingForm">
           <div class="form-group">
-            <label><i class="fas fa-user"></i> اسم الخريج رباعي (كما سيطبع بالشهادة):</label>
-            <input type="text" id="studentName" class="form-control" placeholder="مثال: أحمد محمد حسين علي" required>
+            <label>الاسم رباعي (كما سيُطبع)</label>
+            <input type="text" id="studentName" class="input-field" placeholder="مثال: أحمد محمود يوسف علي" required>
           </div>
           <div class="form-group">
-            <label><i class="fas fa-money-bill-wave"></i> اختر طريقة الدفع:</label>
-            <div class="radio-box-group" id="paymentRadios">
-              <div class="radio-tile" onclick="selectRadio(this)"><input type="radio" name="payType" value="دفع كامل (1200 جنيه)"> دفع كامل (1200 جنيه)</div>
-              <div class="radio-tile" onclick="selectRadio(this)"><input type="radio" name="payType" value="دفع مقدم جدية حجز (600 جنيه)"> دفع مقدم (600 جنيه)</div>
+            <label>نوع الدفع</label>
+            <div class="radio-group" id="payRadiosGroup">
+              <div class="radio-option" data-value="full"><input type="radio" name="payType" value="دفع كامل (1200 جنيه)" hidden> دفع كامل (1200 ج)</div>
+              <div class="radio-option" data-value="deposit"><input type="radio" name="payType" value="دفع مقدم جدية حجز (600 جنيه)" hidden> دفع مقدم (600 ج)</div>
             </div>
           </div>
-          <div id="companionQuestionContainer" style="display:none;">
+          <div id="extraCompanionBlock" style="display: none;">
             <div class="form-group">
-              <label>هل توجد مرافقين إضافيين (غير المجاني)؟</label>
-              <div class="inline-radio-group">
-                <label><input type="radio" name="hasExtraCompanions" value="yes"> نعم</label>
-                <label><input type="radio" name="hasExtraCompanions" value="no"> لا</label>
+              <label>هل توجد مرافقين إضافيين غير المجاني؟</label>
+              <div class="inline-radio">
+                <label><input type="radio" name="hasExtra" value="yes"> نعم</label>
+                <label><input type="radio" name="hasExtra" value="no" checked> لا</label>
+              </div>
+            </div>
+            <div id="extraCountDiv" style="display: none;">
+              <div class="form-group">
+                <label>عدد المرافقين الإضافيين</label>
+                <input type="number" id="extraCount" class="input-field" min="0" value="0" step="1">
               </div>
             </div>
           </div>
-          <div id="extraCompanionsContainer" style="display:none;">
-            <div class="form-group">
-              <label><i class="fas fa-user-plus"></i> عدد المرافقين الإضافيين:</label>
-              <input type="number" id="extraCompanions" class="form-control" placeholder="مثال: 2" min="0" step="1" value="">
-            </div>
-          </div>
-          <div id="totalBox" style="display:none;">
-            <div style="font-size:1.2rem;">الإجمالي النهائي (شامل رسوم السحب): <span id="totalAmount">0</span> جنيه</div>
+          <div id="totalDisplay" class="total-box" style="display: none;">💰 الإجمالي النهائي (شامل رسوم السحب): <span class="total-number" id="totalValue">0</span> جنيه</div>
+          
+          <div class="transfer-card">
+            <i class="fas fa-university"></i> <strong>تحويل عبر إنستا باي / فودافون كاش</strong>
+            <div><span class="big-number">01025004123</span> <button type="button" class="copy-btn" onclick="copyNumber('01025004123')"><i class="fas fa-copy"></i> نسخ</button></div>
+            <small>بعد التحويل سيُرسل كود الحجز الخاص بك</small>
           </div>
 
-          <div class="payment-number-card">
-            <h3><i class="fas fa-exchange-alt"></i> التحويل عبر إنستا باي أو فودافون كاش</h3>
-            <p>على الرقم التالي ثم أرسل إشعار التحويل</p>
-            <div><span class="unified-number">01025004123</span>
-            <button type="button" class="copy-btn-small" onclick="copyToClipboard('01025004123')"><i class="fas fa-copy"></i> نسخ</button></div>
-            <p style="font-size:0.8rem; margin-top:8px;">بعد التحويل ستصلك رسالة بالكود</p>
+          <div class="alert alert-info" style="font-size:0.75rem;">
+            📌 احتفظ بالمحادثة + أرسل لقطة التحويل للمسؤول، وتأكد من استلام الكود للدخول.
           </div>
 
-          <div class="custom-alert alert-blue" style="margin-bottom:18px;">
-            <p style="font-weight:800;">📌 تعليمات ضمان حقك:</p>
-            <ul style="padding-right:18px;">
-              <li>احتفظ بالمحادثة كاملة مع المنظم</li>
-              <li>بعد حساب السعر النهائي أرسل لقطة شاشة التحويل</li>
-              <li>تأكد من استلام الكود الخاص بك لدخول الحفل</li>
-              <li>انضم للجروب الرسمي فور استلام الكود</li>
-            </ul>
-          </div>
-          <button type="submit" id="submitBookingBtn" class="btn-whatsapp-submit" disabled><i class="fab fa-whatsapp fa-lg"></i> إرسال بيانات الحجز عبر واتساب</button>
+          <button type="submit" id="submitBtn" class="whatsapp-btn" disabled><i class="fab fa-whatsapp"></i> إرسال الحجز عبر واتساب</button>
         </form>
       </div>
 
-      <!-- معرض الحفلة السابقة -->
-      <div class="page-section gallery-section">
-        <h2 class="section-internal-title"><i class="fas fa-images"></i> مقتطفات من الحفلة السابقة</h2>
-        <div class="gallery-cards" id="galleryCardsContainer"></div>
-        <div class="gallery-hint"><i class="fas fa-hand-pointer"></i> اضغط على الصورة لفتح المعرض الكامل</div>
+      <!-- معرض مصغر -->
+      <div class="section">
+        <div class="section-title"><i class="fas fa-images"></i> لقطات من الحفلة السابقة</div>
+        <div class="gallery-grid-small" id="galleryMini"></div>
+        <div class="hint-text"><i class="fas fa-hand-point-left"></i> اضغط على صورة لفتح المعرض</div>
       </div>
-      <div class="footer-text">
-        🎓 حفلة تخرج MIS 2026 – جميع الحقوق محفوظة للجنة التنظيمية<br>
-        للاستفسارات: 01025004123 (واتساب فقط)
-      </div>
+      <div class="footer">للاستفسارات: 01025004123 (واتساب فقط) | جميع الحقوق محفوظة © MIS 2026</div>
     </div>
   </div>
 </div>
 
-<div class="float-whatsapp" id="directWhatsappFloat"><i class="fab fa-whatsapp"></i></div>
-<div id="toast" class="toast-msg">✅ تم نسخ الرقم</div>
+<div class="float-wa" id="floatWhatsappBtn"><i class="fab fa-whatsapp"></i></div>
+<div id="toastMsg" class="toast">✅ تم النسخ</div>
 
-<!-- مودالات المعرض -->
-<div id="fullGalleryModal" class="modal-gallery"><div class="modal-content-gallery"><div class="modal-header-gallery"><h3><i class="fas fa-camera"></i> لقطات الحفل السابق</h3><div><button class="mute-gallery-btn" id="muteGalleryBtn"><i class="fas fa-volume-up" id="galleryMuteIcon"></i></button><button class="close-modal-btn" id="closeModalBtn">&times;</button></div></div><div class="gallery-grid" id="galleryGridContainer"></div></div></div>
-<div id="imagePreviewModal" class="image-preview-modal"><div class="preview-container"><button class="nav-btn prev-btn" id="prevImageBtn"><i class="fas fa-chevron-right"></i></button><img id="previewImage" alt="مكبر"><button class="nav-btn next-btn" id="nextImageBtn"><i class="fas fa-chevron-left"></i></button><div class="close-preview" id="closePreviewBtn">&times;</div><div class="counter" id="imageCounter"></div></div></div>
+<!-- مودال المعرض الكامل -->
+<div id="galleryModal" class="modal">
+  <div class="modal-inner">
+    <div class="modal-header">
+      <span><i class="fas fa-images"></i> معرض الحفل</span>
+      <button id="closeModalBtn">&times;</button>
+    </div>
+    <div class="gallery-grid-full" id="fullGalleryGrid"></div>
+  </div>
+</div>
 
-<audio id="welcomeMusic" src="welcome-music.mp3" preload="auto"></audio>
-<audio id="galleryMusic" src="gallery-music.mp3" preload="auto" loop></audio>
+<!-- مودال عرض الصورة المكبرة -->
+<div id="previewModal" class="preview-modal">
+  <div class="preview-container">
+    <button class="nav-btn prev" id="prevBtn"><i class="fas fa-chevron-right"></i></button>
+    <img id="previewImg" alt="مكبر">
+    <button class="nav-btn next" id="nextBtn"><i class="fas fa-chevron-left"></i></button>
+    <div class="close-preview" id="closePreview">&times;</div>
+    <div class="counter" id="imgCounter"></div>
+  </div>
+</div>
+
+<audio id="welcomeAudio" src="welcome-music.mp3" preload="auto"></audio>
+<audio id="galleryAudio" src="gallery-music.mp3" preload="auto" loop></audio>
 
 <script>
-  // ======================== البيانات والمتغيرات ========================
-  const TOTAL_IMAGES = 31;
-  const IMAGE_BASE = "images/";
+  // ------------------- بيانات الصور -------------------
+  const TOTAL = 31;
+  const BASE = "images/";
   const EXT = ".jpg";
-  let currentPreviewIndex = 1;
-  let welcomeMuted = false, galleryMuted = false;
-  const welcomeMusic = document.getElementById('welcomeMusic');
-  const galleryMusic = document.getElementById('galleryMusic');
-  const welcomeMuteBtn = document.getElementById('muteWelcomeBtn');
-  const welcomeMuteIcon = document.getElementById('welcomeMuteIcon');
-  const muteGalleryBtn = document.getElementById('muteGalleryBtn');
-  const galleryMuteIcon = document.getElementById('galleryMuteIcon');
+  let currentPreview = 1;
+  let galleryImages = [];
+  for (let i = 1; i <= TOTAL; i++) galleryImages.push(`${BASE}${i}${EXT}`);
 
-  function toggleWelcomeMute() {
-    welcomeMuted = !welcomeMuted;
-    if(welcomeMuted) { welcomeMusic.pause(); welcomeMusic.muted = true; welcomeMuteIcon.className = 'fas fa-volume-mute'; }
-    else { welcomeMusic.muted = false; welcomeMuteIcon.className = 'fas fa-volume-up'; }
-  }
-  welcomeMuteBtn.addEventListener('click', toggleWelcomeMute);
-  function toggleGalleryMute() {
-    galleryMuted = !galleryMuted;
-    if(galleryMuted) { galleryMusic.pause(); galleryMusic.muted = true; galleryMuteIcon.className = 'fas fa-volume-mute'; }
-    else { galleryMusic.muted = false; galleryMuteIcon.className = 'fas fa-volume-up'; }
-  }
-  muteGalleryBtn.addEventListener('click', toggleGalleryMute);
-  function manualPlayWelcome() {
-    if(welcomeMuted) { showToast("🔇 الموسيقى مكتومة، ألغِ الكتم أولاً"); return; }
-    welcomeMusic.pause(); welcomeMusic.currentTime = 0;
-    welcomeMusic.play().catch(e=>console.log);
-  }
-  function playGalleryMusic() { if(!galleryMuted) galleryMusic.play().catch(e=>{}); }
-  function stopGalleryMusic() { galleryMusic.pause(); galleryMusic.currentTime = 0; }
-  function showToast(msg) { let t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2000); }
-  function copyToClipboard(text) { navigator.clipboard.writeText(text).then(()=>showToast("✅ تم نسخ الرقم")); }
-  function calculateFee(amount) { if(amount<=0) return 0; let thousands=Math.floor(amount/1000), rem=amount%1000; let fee=thousands*10; if(rem>0) fee+= rem<=500?5:10; return fee; }
+  // ------------------- المتغيرات العامة -------------------
+  let isWelcomeMuted = false;
+  const welcomeAudio = document.getElementById('welcomeAudio');
+  const galleryAudio = document.getElementById('galleryAudio');
+  const muteIcon = document.getElementById('muteIcon');
+  const playBtn = document.getElementById('playMusicBtn');
+  const muteBtn = document.getElementById('muteMusicBtn');
 
-  // منطق النموذج
-  function selectRadio(el) { document.querySelectorAll('.radio-tile').forEach(t=>t.classList.remove('active')); el.classList.add('active'); el.querySelector('input').checked=true; updateExtraCompanionsVisibility(); updateTotalDisplay(); validateFormAndEnableSubmit(); }
-  function updateExtraCompanionsVisibility() {
-    let selected=document.querySelector('input[name="payType"]:checked');
-    let qDiv=document.getElementById('companionQuestionContainer'), extraDiv=document.getElementById('extraCompanionsContainer');
-    if(selected && selected.value.includes('1200')) { qDiv.style.display='block'; document.querySelectorAll('input[name="hasExtraCompanions"]').forEach(r=>r.checked=false); extraDiv.style.display='none'; }
-    else { qDiv.style.display='none'; extraDiv.style.display='none'; }
+  function updateMuteIcon() { muteIcon.className = isWelcomeMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up'; }
+  function toggleMute() { isWelcomeMuted = !isWelcomeMuted; welcomeAudio.muted = isWelcomeMuted; updateMuteIcon(); }
+  function playWelcome() { if(isWelcomeMuted) { showToastMsg("🔇 الموسيقى مكتومة، ألغِ الكتم أولاً"); return; } welcomeAudio.currentTime = 0; welcomeAudio.play().catch(e=>console.log); }
+  muteBtn.addEventListener('click', toggleMute);
+  playBtn.addEventListener('click', playWelcome);
+
+  let galleryMuted = false;
+  function playGalleryMusic() { if(!galleryMuted) galleryAudio.play().catch(e=>{}); }
+  function stopGalleryMusic() { galleryAudio.pause(); galleryAudio.currentTime = 0; }
+
+  // ------------------- نسخ واشعار -------------------
+  function showToastMsg(msg) { let t = document.getElementById('toastMsg'); t.textContent = msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'), 1800); }
+  window.copyNumber = (num) => { navigator.clipboard.writeText(num); showToastMsg("✅ تم نسخ الرقم"); };
+
+  // ------------------- منطق الحجز -------------------
+  const fullRadioDivs = document.querySelectorAll('.radio-option');
+  const payRadios = document.querySelectorAll('input[name="payType"]');
+  const extraBlock = document.getElementById('extraCompanionBlock');
+  const extraCountDiv = document.getElementById('extraCountDiv');
+  const hasExtraRadios = document.querySelectorAll('input[name="hasExtra"]');
+  const extraCountInput = document.getElementById('extraCount');
+  const totalDisplayDiv = document.getElementById('totalDisplay');
+  const totalValueSpan = document.getElementById('totalValue');
+  const submitBtn = document.getElementById('submitBtn');
+  const studentNameInput = document.getElementById('studentName');
+
+  function calculateFee(amount) { if(amount<=0) return 0; let th = Math.floor(amount/1000); let rem = amount%1000; let fee = th*10 + (rem>0 ? (rem<=500?5:10) : 0); return fee; }
+  function getTotal() {
+    let selectedPay = document.querySelector('input[name="payType"]:checked');
+    if(!selectedPay) return 0;
+    let isFull = selectedPay.value.includes('1200');
+    if(!isFull) { let fee = calculateFee(600); return 600 + fee; }
+    let base = 1200;
+    let extraCount = 0;
+    let hasYes = document.querySelector('input[name="hasExtra"]:checked')?.value === 'yes';
+    if(hasYes) { let val = extraCountInput.value; if(val && !isNaN(parseInt(val)) && parseInt(val)>0) extraCount = parseInt(val); }
+    let subtotal = base + (extraCount * 300);
+    let fee = calculateFee(subtotal);
+    return subtotal + fee;
   }
-  function toggleExtraCompanionsField(show) { let extraDiv=document.getElementById('extraCompanionsContainer'); if(show) extraDiv.style.display='block'; else { extraDiv.style.display='none'; document.getElementById('extraCompanions').value=""; } updateTotalDisplay(); validateFormAndEnableSubmit(); }
-  function updateTotalDisplay() {
-    let selected=document.querySelector('input[name="payType"]:checked'), totalDiv=document.getElementById('totalBox'), totalSpan=document.getElementById('totalAmount');
-    if(!selected) { totalDiv.style.display='none'; return; }
-    let total=0;
-    if(selected.value.includes('1200')) {
-      let base=1200, compCount=0;
-      let hasYes=document.querySelector('input[name="hasExtraCompanions"][value="yes"]:checked');
-      if(hasYes) { let raw=document.getElementById('extraCompanions').value; if(raw && !isNaN(parseInt(raw)) && parseInt(raw)>0) compCount=parseInt(raw); }
-      let subtotal=base + (compCount*300);
-      total=subtotal+calculateFee(subtotal);
-    } else { total=600+calculateFee(600); }
-    totalSpan.innerText=total; totalDiv.style.display='block';
+  function updateTotalAndDisplay() {
+    let total = getTotal();
+    if(total > 0) { totalValueSpan.innerText = total; totalDisplayDiv.style.display = 'block'; } 
+    else totalDisplayDiv.style.display = 'none';
   }
-  function validateFormAndEnableSubmit() {
-    let btn=document.getElementById('submitBookingBtn');
-    let name=document.getElementById('studentName').value.trim();
-    let selected=document.querySelector('input[name="payType"]:checked');
-    if(!name || !selected) { btn.disabled=true; return; }
-    if(selected.value.includes('1200')) {
-      let ans=document.querySelector('input[name="hasExtraCompanions"]:checked');
-      if(!ans) { btn.disabled=true; return; }
-      if(ans.value==='yes') {
-        let compVal=document.getElementById('extraCompanions').value.trim();
-        if(compVal==="" || isNaN(parseInt(compVal)) || parseInt(compVal)<0) { btn.disabled=true; return; }
-      }
+  function toggleExtraFields() {
+    let selectedPay = document.querySelector('input[name="payType"]:checked');
+    if(selectedPay && selectedPay.value.includes('1200')) { extraBlock.style.display = 'block'; let hasYes = document.querySelector('input[name="hasExtra"]:checked')?.value === 'yes'; extraCountDiv.style.display = hasYes ? 'block' : 'none'; } 
+    else { extraBlock.style.display = 'none'; extraCountDiv.style.display = 'none'; document.querySelectorAll('input[name="hasExtra"]').forEach(r=>r.checked=false); }
+    updateTotalAndDisplay();
+  }
+  function enableSubmit() {
+    let name = studentNameInput.value.trim();
+    let payChecked = document.querySelector('input[name="payType"]:checked');
+    if(!name || !payChecked) { submitBtn.disabled = true; return; }
+    if(payChecked.value.includes('1200')) {
+      let extraAns = document.querySelector('input[name="hasExtra"]:checked');
+      if(!extraAns) { submitBtn.disabled = true; return; }
+      if(extraAns.value === 'yes') { let val = extraCountInput.value; if(val==="" || isNaN(parseInt(val)) || parseInt(val)<0) { submitBtn.disabled = true; return; } }
     }
-    btn.disabled=false;
+    submitBtn.disabled = false;
   }
-  document.getElementById('studentName').addEventListener('input', validateFormAndEnableSubmit);
-  document.getElementById('extraCompanions')?.addEventListener('input', ()=>{ updateTotalDisplay(); validateFormAndEnableSubmit(); });
-  document.querySelectorAll('input[name="hasExtraCompanions"]').forEach(r=>r.addEventListener('change', function(){ updateTotalDisplay(); validateFormAndEnableSubmit(); }));
-  document.getElementById('manualPlayBtn').addEventListener('click', manualPlayWelcome);
-  document.getElementById('directWhatsappFloat').addEventListener('click', ()=>{ window.open('https://wa.me/201025004123?text='+encodeURIComponent('السلام عليكم، استفسار عن حفلة التخرج MIS'), '_blank'); });
+  fullRadioDivs.forEach((div, idx) => { div.addEventListener('click', () => { fullRadioDivs.forEach(d=>d.classList.remove('active')); div.classList.add('active'); let radio = div.querySelector('input'); if(radio) radio.checked = true; toggleExtraFields(); enableSubmit(); }); });
+  hasExtraRadios.forEach(r => r.addEventListener('change', () => { let yes = r.value === 'yes'; extraCountDiv.style.display = yes ? 'block' : 'none'; if(!yes) extraCountInput.value = "0"; updateTotalAndDisplay(); enableSubmit(); }));
+  extraCountInput.addEventListener('input', () => { updateTotalAndDisplay(); enableSubmit(); });
+  studentNameInput.addEventListener('input', enableSubmit);
 
   function sendToWhatsapp(e) {
-    e.preventDefault(); if(document.getElementById('submitBookingBtn').disabled) return;
-    let name=document.getElementById('studentName').value;
-    let selected=document.querySelector('input[name="payType"]:checked');
+    e.preventDefault();
+    if(submitBtn.disabled) return;
+    let name = studentNameInput.value.trim();
+    let selected = document.querySelector('input[name="payType"]:checked');
     if(!selected) return;
-    let details="", totalFinal=0;
-    if(selected.value.includes('1200')) {
-      let compCount=0;
-      let hasYes=document.querySelector('input[name="hasExtraCompanions"][value="yes"]:checked');
-      if(hasYes) { let raw=document.getElementById('extraCompanions').value; if(raw && !isNaN(parseInt(raw))) compCount=parseInt(raw); }
-      let subtotal=1200+(compCount*300); let fee=calculateFee(subtotal); totalFinal=subtotal+fee;
-      details=`دفع كامل (1200) + ${compCount} مرافق إضافي (تكلفة ${compCount*300} ج) = إجمالي ${totalFinal} ج (شامل رسوم السحب ${fee} ج)`;
-    } else { let fee=calculateFee(600); totalFinal=600+fee; details=`دفع مقدم (600) + رسوم سحب = إجمالي ${totalFinal} ج`; }
-    let msg = `السلام عليكم، أحجز في حفلة تخرج MIS 2026 🎓%0A%0Aاسم الخريج: ${name}%0Aنوع الدفع: ${selected.value}%0A${details}%0A%0Aالرجاء تأكيد الإجمالي لإرسال تحويل إلى 01025004123 (إنستا باي/فودافون كاش)`;
+    let isFull = selected.value.includes('1200');
+    let details = "";
+    let totalFinal = getTotal();
+    if(isFull) {
+      let extraCount = 0;
+      if(document.querySelector('input[name="hasExtra"]:checked')?.value === 'yes') { let v = extraCountInput.value; if(v && !isNaN(parseInt(v))) extraCount = parseInt(v); }
+      details = `دفع كامل (1200) + ${extraCount} مرافق إضافي (تكلفة ${extraCount*300} ج) = إجمالي ${totalFinal} ج (شامل رسوم السحب)`;
+    } else { details = `دفع مقدم (600) + رسوم سحب = إجمالي ${totalFinal} ج`; }
+    let msg = `السلام عليكم، حجز تخرج MIS 2026 🎓%0Aالاسم: ${name}%0Aنوع الدفع: ${selected.value}%0A${details}%0Aيرجى تأكيد الإجمالي لإرسال التحويل إلى 01025004123`;
     window.open(`https://wa.me/201025004123?text=${encodeURIComponent(msg)}`, '_blank');
   }
+  document.getElementById('bookingForm').addEventListener('submit', sendToWhatsapp);
+  document.getElementById('floatWhatsappBtn').addEventListener('click', ()=>{ window.open('https://wa.me/201025004123?text='+encodeURIComponent('مرحبًا، استفسار عن حفلة التخرج MIS'), '_blank'); });
 
-  // معرض الصور
-  const cardsContainer=document.getElementById("galleryCardsContainer");
-  for(let i=1;i<=5;i++){ let card=document.createElement("div"); card.className="gallery-card"; let img=document.createElement("img"); img.src=`${IMAGE_BASE}${i}${EXT}`; img.alt="لقطة"; img.onerror=function(){this.src=`https://placehold.co/500x500/0c2d4b/fbbf24?text=${i}`;}; card.appendChild(img); card.addEventListener("click",()=>openFullGallery()); cardsContainer.appendChild(card); }
-  const modal=document.getElementById("fullGalleryModal"), galleryGrid=document.getElementById("galleryGridContainer"), closeModalBtn=document.getElementById("closeModalBtn");
-  function fillGalleryGrid(){ galleryGrid.innerHTML=""; for(let i=1;i<=TOTAL_IMAGES;i++){ let item=document.createElement("div"); item.className="gallery-grid-item"; let imgEl=document.createElement("img"); imgEl.src=`${IMAGE_BASE}${i}${EXT}`; imgEl.onerror=function(){this.src=`https://placehold.co/500x500/1e293b/fbbf24?text=${i}`;}; item.appendChild(imgEl); item.addEventListener("click",(e)=>{e.stopPropagation(); currentPreviewIndex=i; openImagePreview();}); galleryGrid.appendChild(item);} }
-  let isGalleryOpen=false;
-  function openFullGallery(){ if(galleryGrid.children.length===0) fillGalleryGrid(); modal.style.display="flex"; document.body.style.overflow="hidden"; welcomeMusic.pause(); playGalleryMusic(); isGalleryOpen=true; history.pushState({galleryOpen:true},""); }
-  function closeGalleryModal(){ modal.style.display="none"; document.body.style.overflow=""; stopGalleryMusic(); isGalleryOpen=false; if(history.state?.galleryOpen) history.back(); }
-  window.addEventListener('popstate',()=>{ if(isGalleryOpen) closeGalleryModal(); });
-  closeModalBtn.addEventListener("click",closeGalleryModal); modal.addEventListener("click",(e)=>{if(e.target===modal) closeGalleryModal();});
-  const previewModal=document.getElementById("imagePreviewModal"), previewImage=document.getElementById("previewImage"), prevBtn=document.getElementById("prevImageBtn"), nextBtn=document.getElementById("nextImageBtn"), closePreviewBtn=document.getElementById("closePreviewBtn"), counterSpan=document.getElementById("imageCounter");
-  function updatePreviewImage(){ let src=`${IMAGE_BASE}${currentPreviewIndex}${EXT}`; previewImage.src=src; previewImage.onerror=function(){this.src=`https://placehold.co/1000x800/1e293b/fbbf24?text=${currentPreviewIndex}`;}; counterSpan.textContent=`صورة ${currentPreviewIndex} من ${TOTAL_IMAGES}`; }
-  function openImagePreview(){ updatePreviewImage(); previewModal.style.display="flex"; document.body.style.overflow="hidden"; }
-  function closeImagePreview(){ previewModal.style.display="none"; document.body.style.overflow=""; }
-  function nextImage(){ currentPreviewIndex=(currentPreviewIndex%TOTAL_IMAGES)+1; updatePreviewImage(); }
-  function prevImage(){ currentPreviewIndex=(currentPreviewIndex-2+TOTAL_IMAGES)%TOTAL_IMAGES+1; updatePreviewImage(); }
-  prevBtn.addEventListener("click",(e)=>{e.stopPropagation(); prevImage();}); nextBtn.addEventListener("click",(e)=>{e.stopPropagation(); nextImage();}); closePreviewBtn.addEventListener("click",closeImagePreview); previewModal.addEventListener("click",(e)=>{if(e.target===previewModal) closeImagePreview();});
-  document.addEventListener("keydown",(e)=>{if(previewModal.style.display==="flex"){if(e.key==="ArrowRight"){prevImage();e.preventDefault();}else if(e.key==="ArrowLeft"){nextImage();e.preventDefault();}else if(e.key==="Escape"){closeImagePreview();}}});
-  // ربط تغيير المرافقين
-  document.querySelectorAll('input[name="hasExtraCompanions"]').forEach(r=>r.addEventListener('change',function(){ toggleExtraCompanionsField(this.value==='yes'); }));
-  window.selectRadio=selectRadio; window.toggleExtraCompanionsField=toggleExtraCompanionsField; window.copyToClipboard=copyToClipboard; window.sendToWhatsapp=sendToWhatsapp;
+  // ------------------- معرض الصور -------------------
+  const miniContainer = document.getElementById('galleryMini');
+  for (let i=1; i<=3; i++) { 
+    let thumb = document.createElement('div'); thumb.className = 'gallery-thumb';
+    let img = document.createElement('img'); img.src = `${BASE}${i}${EXT}`; img.onerror = function(){ this.src = `https://placehold.co/400x400/1e293b/fbbf24?text=${i}`; };
+    thumb.appendChild(img); thumb.addEventListener('click', ()=>openFullGallery()); miniContainer.appendChild(thumb);
+  }
+  const modalGallery = document.getElementById('galleryModal');
+  const fullGrid = document.getElementById('fullGalleryGrid');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  function fillFullGrid() { fullGrid.innerHTML = ''; for(let i=1;i<=TOTAL;i++){ let div = document.createElement('div'); div.className = 'full-img-item'; let imgEl = document.createElement('img'); imgEl.src = `${BASE}${i}${EXT}`; imgEl.onerror=function(){this.src=`https://placehold.co/500x500/0f2b3d/fbbf24?text=${i}`;}; div.appendChild(imgEl); div.addEventListener('click', (e)=>{ e.stopPropagation(); currentPreview = i; openImagePreview(); }); fullGrid.appendChild(div); } }
+  function openFullGallery() { if(fullGrid.children.length===0) fillFullGrid(); modalGallery.style.display = 'flex'; document.body.style.overflow = 'hidden'; welcomeAudio.pause(); playGalleryMusic(); }
+  function closeGallery() { modalGallery.style.display = 'none'; document.body.style.overflow = ''; stopGalleryMusic(); }
+  closeModalBtn.addEventListener('click', closeGallery); modalGallery.addEventListener('click', (e)=>{ if(e.target === modalGallery) closeGallery(); });
+
+  const previewModalDiv = document.getElementById('previewModal');
+  const previewImg = document.getElementById('previewImg');
+  const prevBtnNav = document.getElementById('prevBtn');
+  const nextBtnNav = document.getElementById('nextBtn');
+  const closePreviewBtn = document.getElementById('closePreview');
+  const imgCounterSpan = document.getElementById('imgCounter');
+  function updatePreview() { previewImg.src = `${BASE}${currentPreview}${EXT}`; previewImg.onerror = function(){ this.src = `https://placehold.co/900x800/0f2b3d/fbbf24?text=${currentPreview}`; }; imgCounterSpan.innerText = `صورة ${currentPreview} من ${TOTAL}`; }
+  function openImagePreview() { updatePreview(); previewModalDiv.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+  function closeImagePreview() { previewModalDiv.style.display = 'none'; document.body.style.overflow = ''; }
+  function nextImage() { currentPreview = (currentPreview % TOTAL) + 1; updatePreview(); }
+  function prevImage() { currentPreview = (currentPreview - 2 + TOTAL) % TOTAL + 1; updatePreview(); }
+  prevBtnNav.addEventListener('click', (e)=>{ e.stopPropagation(); prevImage(); });
+  nextBtnNav.addEventListener('click', (e)=>{ e.stopPropagation(); nextImage(); });
+  closePreviewBtn.addEventListener('click', closeImagePreview);
+  previewModalDiv.addEventListener('click', (e)=>{ if(e.target === previewModalDiv) closeImagePreview(); });
+  document.addEventListener('keydown', (e)=>{ if(previewModalDiv.style.display === 'flex') { if(e.key === 'ArrowRight') prevImage(); else if(e.key === 'ArrowLeft') nextImage(); else if(e.key === 'Escape') closeImagePreview(); } });
+  // تعيين الموسيقى للمعرض
+  let galleryMuteState = false;
+  const muteGalleryFunc = () => { galleryMuted = !galleryMuted; if(galleryMuted) galleryAudio.pause(); else galleryAudio.play().catch(e=>{}); };
+  // إضافة زر كتم داخل المعرض اختياري ولكننا نكتفي بالكتم العام
+  window.addEventListener('load', ()=>{ updateMuteIcon(); });
 </script>
 </body>
 </html>
